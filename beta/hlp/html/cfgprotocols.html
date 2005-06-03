@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_cfgprotocols"></A>Настройка протоколов передачи</H1>
+
+<P>Секция содержит элементы управления настройками протоколов <A HREF="oftnhydra.html">Гидра</A> и <A HREF="binkp.html">BinkP</A>. Эти настройки предназначены для обеспечения совместимости Радиуса с другими мейлерами и для задействования некоторых новых возможностей.</P>
+
+<TABLE cols=2 width=754 border=1>
+
+<TR VALIGN="top">
+<TH width=17%>
+Параметры
+</TH>
+<TH width=83%>Описание</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>TxWindow</PRE>
+</TD>
+<TD width=83%>Размер окна на передачу для протокола Гидра.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>RxWindow</PRE>
+</TD>
+<TD width=83%>Размер окна на прием.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>Short and long name</PRE>
+</TD>
+<TD width=83%>Передавать на протоколе Гидра и короткое, и длинное имя файла, как делает большинство мейлеров.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>OEM charset</PRE>
+</TD>
+<TD width=83%>Использовать для протокола Гидра кодиовку OEM. Эта установка влияет на корректность приема/передачи файлов, содержащих в именах нелатинские.символы. Кодировку OEM традиционно использует большинство мейлеров. Аргус, в отличие от них, использует кодировку ANSI.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>Debug</PRE>
+</TD>
+<TD width=83%>Вести хронологию отладочной информации для протокола Гидра.</TD>
+</TR>
+
+</TABLE><BR>
+
+<P>Модуль для протокола Гидра переработан и приведен в соответствие со стандартом <a href="sergei.shumakov@altavista.net">Сергеем Шумаковым</a>, E-mail: sergei.shumakov@altavista.net, FidoNet: 2:5005/47.</P>
+
+<TABLE cols=2 width=754 border=1>
+
+<TR VALIGN="top">
+<TH width=17%>
+Параметры
+</TH>
+<TH width=83%>Описание</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>Request Crypt</PRE>
+</TD>
+<TD width=83%>Запрос шифрованного сеанса связи, совместимого с BinkD. Данный режим поддерживается только на протоколе BinkP. См. также <A HREF="binkpenc.html">Шифрованный сеанс BinkP</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE>Request File List</PRE>
+</TD>
+<TD width=83%>Запрос у удаленной системы списка передаваемых файлов. Если обе стороны поддерживают эту возможность, то по запросу присылается список файлов в той очередности, в которой они будут присланы. Если очередь состоит из единственного файла, то список не передается. Данная опция включается отдельно для протоколов Гидра и BinkP.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Chat enabled</TD>
+<TD>Включить <A HREF="chat.html">чат</A>. После включения чата во время сессии становится доступной кнопка <U>Open Chat</U>, расположенная в нижней части <A HREF="mlrd.html">окна линии почтовой системы</A>, при условии, что удаленная система поддерживает режим чата. Чат работает на протоколах Гидра и BinkP. См. также <A HREF="atoms.html">атомы</A> <U>Enable Chat</U>, <U>Disable Chat</U>.</TD>
+<TD>
+&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Chat bell</TD>
+<TD>Задать путь к файлу звукового оповещения о запросе чата удаленной системой. Если файл не указан, оповещения не будет. См. также <A HREF="atoms.html">атом</A> <U>Chat Bell</U>.</TD>
+<TD>
+&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Lamps in tray</TD>
+<TD>Вместо значка Радиуса показывать в трее иконку с лампочками, дублирующими сигналы модема.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Ignore CD</TD>
+<TD>Игнорировать сигнал <CODE>CARRIER DETECTED</CODE> модема.</TD>
+</TR>
+
+</TABLE><BR>
+
+<P>См. также <A HREF="cfgnodes.html">Флаги настройки протокола Гидра</A>.</P>
+
+</BODY>
+</HTML>
+

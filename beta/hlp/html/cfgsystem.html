@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_cfgsystem"></A>Системные параметры</H1>
+
+<h2 style="color:red">Не вносите изменений в данной секции, если вы не уверены в их корректности!</h2>
+
+<TABLE cols=3 width=754 border=1>
+
+<TR VALIGN="top">
+<TH>Параметр</TH>
+<TH>Описание</TH>
+<TH>Пример</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD>Mutex name</TD>
+<TD ROWSPAN="3" valign="center">Изменив значения этих параметров, вы сможете запустить новую копию Радиуса. <B>Будьте осторожны, не меняйте эти значения, если вы не знаете, что это такое!</B></TD>
+<TD align=center valign=center>
+<CODE>ARGUS_SEMAPHORE</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Activate Event Name</TD>
+<TD align=center valign=center>
+<CODE>ARGUS_EVENT_ACTIVATE</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Directory Watcher Event Name</TD>
+<TD align=center valign=center>
+<CODE>ARGUS_EVENT_DIRECTORY_WATCHER</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>EMSI CR</TD>
+<TD>Возможность посылки определенных символов в качестве терминатора EMSI-последовательности (символ CR или пара символов CR LF).</TD>
+<TD align=center valign=center>
+<CODE>%0D<BR>%0D%0A</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Simple BSY</TD>
+<TD>Возможность открытия .BSY-файлов без DELETE_ON_CLOSE. В этом случае файлы будут удаляться командой DeleteFile. Это может быть полезно на сетевых устройствах.</TD>
+<TD align=center valign=center>
+&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Close BWZ</TD>
+<TD>Возможность держать закрытым файл badwazoo.lst. Hе изменяйте этот файл, когда запущен Радиус. Ваши изменения могут быть перезаписаны.</TD>
+<TD align=center valign=center>
+&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Ignore end session</TD>
+<TD>Возможность игнорировать сигналы завершения сессии (WM_ENDSESSION и WM_QUERYENDSESSION). Это может быть полезно при работе сервисом NT.</TD>
+<TD align=center valign=center>
+&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Ignore BadWaZoo Size</TD>
+<TD>Игнорировать информацию о полном размере недопринятых файлов и пакетов, помещенных во <A HREF="sdti.html">временный каталог</A>. Это может быть полезно, например, в нештатных ситуациях, когда при обрыве связи по какой-либо ошибке полный размер файла был записан неверно, и файл требуется допринять по имени. См. также <A HREF="badwazoo.html">Панель BadWaZOO</A>.
+</TD>
+<TD align=center valign=center>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Force fax page</TD>
+<TD>Запись частично принятых страниц факса.</TD>
+<TD align=center valign=center>
+&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Increment arcmail</TD>
+<TD>Автоматическое увеличение последнего символа расширения принятых почтовых пакетов (ARСmail), если файл с таким именем уже присутствует в <A HREF="sdsi.html">каталоге приема</A>.</TD>
+<TD align=center valign=center>
+&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Disable winsock traps</TD>
+<TD>Возможность избежать перезагрузки Радиуса при возникновении фатальных ошибок WinSock (shutdown/closesocket errors). Использовать эту опцию не рекомендуется, так как нормальная работа после фатальных ошибок маловероятна.</TD>
+<TD align=center valign=center>
+&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Winsock version</TD>
+<TD>Возможность выбора версии WinSocket:<BR>WinSocket v1,<BR>WinSocket v2,<BR>автоматический выбор.</TD>
+<TD align=center valign=center>
+<CODE>Winsock auto<BR>Winsock v1<BR>Winsock v2</CODE>
+</TD>
+</TR>
+
+</TABLE><BR>
+  
+</BODY>
+</HTML>

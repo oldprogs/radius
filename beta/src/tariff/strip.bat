@@ -1,0 +1,1 @@
+e:\dev-cpp\bin\strip.exe --strip-all tariff.exe

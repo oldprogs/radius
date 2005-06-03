@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_scripts"></A>Скрипты</H1>
+
+<P>Скрипты - это специальные последовательности команд, воспринимаемых Радиусом и позволяющих распознавать и обрабатывать ответы модема в автоматическом режиме. Используя скрипты, можно, например, передать удаленной системе свои логин и пароль в ответ на запрос маршрутизатора; управлять параметрами соединения в зависимости от телефонного номера удаленной системы; обрабатывать внешние управляющие тональные сигналы и т.д.</P>
+
+<P>В Радиусе имеются следующие <A HREF="atoms.html">атомы</A>, работающие со скриптами: <CODE>Login Script</CODE> (для взаимодействия с удаленной системой) и <CODE>Modem Script</CODE> (для передачи команд модему и обработки его ответов).</P>
+
+<P>    Скрипт разбит на строки (неограниченное количество), которые 
+    последовательно передаются удаленной стороне (<CODE>Login Script</CODE>) или модему (<CODE>Modem Script</CODE>). Между посылкой строк
+    Радиус ждет определенного ответа или истечения таймаута.</P>
+
+<P>    Каждая строка имеет четыре поля: "Modem Cmd", "RegExp", "T-out Sec" и "T-out Cmd".   Скрипт работает по следующей схеме:</P>
+
+<OL>
+<LI>   посылает модему команду "Modem Cmd",</LI>
+
+<LI>   сканирует ответ от модема по <A HREF="regexp.html">регулярному выражению</A> "RegExp" и при этом 
+       ждет таймаута "T-out Sec" секунд,</LI>
+
+<LI>   при соответствии ответа регулярному выражению переходит на следующую 
+       строчку скрипта,</LI>
+
+<LI>   по истечении таймаута ожидания ответа: 
+<BR>а). посылает модему команду "T-out Cmd" и переходит к пункту 2 (<CODE>Login Script</CODE>)
+<BR>б). переходит на строку, указанную в поле "T-out Cmd" (<CODE>Modem Script</CODE>)
+<BR>в). если поле "T-out Cmd" пустое, переходит к предыдущей строке скрипта (для обоих).</LI>
+</OL>
+
+<P>Большие возможности предоставляет атом <CODE>Modem Script</CODE>. Для него кроме модемных команд и регулярных выражений допускается использование следующих макросов:</P>
+
+<TABLE cols=2 width=754 border=1>
+
+<TR VALIGN="top">
+<TH width=17%>Макрос</TH>
+<TH width=66%>Описание</TH>
+<TH width=17%>Поле</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%case</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Ветвление. После этого макроса должны идти строки перехода следующего вида: в поле "RegExp" указывается регулярное выражение, а в поле "T-out Cmd" - номер строки для перехода.</TD>
+<TD width=17% align="center" valign="center">"RegExp", "T-out Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%exec</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Запустить внешнее приложение, путь к которому указан в поле "RegExp" (в данном случае это не имеет отношения к регулярным выражениям).</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "RegExp"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%ftn</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Начать FTN-сессию.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%goto</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Безусловный переход на метку, указанную в поле "T-out Cmd". Меткой должно быть число, обозначающее номер строки для перехода.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "T-out Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%hint</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Вывести последнюю строку ответа модема в виде подсказки в "облачке" над значком Радиуса в системном трее (см. также <A HREF="cfgtray.html">Секция Tray</A> <A HREF="preferences.html">диалога "Настройки"</A>).</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%hold</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Перевести прозвонки на указанные адреса (если они созданы) в состояние отбоя (см. <A HREF="cfgppolls.html">Параметры прозвонок</A>). Адреса или маски адресов задаются в поле "RegExp". Если список адресов не задан, в состояние отбоя переводится текущая прозвонка. Данный макрос полезно сопоставить ответу <CODE>NO DIALTONE</CODE> для модемов, которые не выдают сигнала <CODE>LINE IN USE</CODE>, если телефонная линия занята.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "RegExp"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%nop</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Пустая команда.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%play</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Проиграть звуковой файл, путь к которому указан в поле "RegExp". См. также <A HREF="cfgsound.html">Озвучивание событий</A>.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "RegExp"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%pop</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Извлечь последнюю строку из буфера скриптов.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%push</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Отправить последнюю строку ответа модема в буфер для последующей обработки (например, <A HREF="atoms.html">атомом</A> <CODE>Response Log Format</CODE>). В поле "RegExp" допускается явно указывать команду, посылаемую в буфер.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "RegExp"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%save</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Все строки ответов модема, сохраненные этим макросом, будут отправлены в буфер в момент выхода из скрипта. В поле "RegExp" допускается явно указывать команду, посылаемую в буфер.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "RegExp"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%stop</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Прервать выполнение скрипта и разорвать соединение.</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17% align="center" valign="center">
+<PRE><CODE>%wait</CODE></PRE>
+</TD>
+<TD width=66% valign="center">Пауза. Длительность паузы в секундах указывается в поле "T-out Sec".</TD>
+<TD width=17% align="center" valign="center">"Modem Cmd", "T-out Sec"</TD>
+</TR>
+
+</TABLE><BR><BR>
+
+<P>Результаты обработки скриптов сохраняются в файле <CODE>exec-line.log</CODE> в <A HREF="sdl.html">каталоге хронологии</A> Радиуса.</P>
+
+<P>Пример для атома <CODE>Modem Script</CODE> (Mitya Gladyshev). После запуска скрипта по ответу модема <CODE>RING</CODE> в модем посылается команда на определение номера, номер проверяется на соответствие регулярному выражению. Если проверка успешна, то выдается команда на соединение с пониженной скоростью (иначе связаться с этими узлами вообще невозможно), в противном случае соединение будет без ограничений.</P>
+
+<PRE><CODE>Modem Response:
+
+        RING
+
+Скрипт:
+</CODE></PRE>
+
+<TABLE cols=5 width=550 border=1>
+
+<TR VALIGN="center">
+<TH width=5%>№</TH>
+<TH width=15%>Modem Cmd</TH>
+<TH width=60%>RegExp</TH>
+<TH width=10%>T-out Sec</TH>
+<TH width=10%>T-out Cmd</TH>
+</TR>
+
+<TR align="center" valign="center">
+<TD>1</TD>
+<TD><CODE>ATH1!</CODE></TD>
+<TD><CODE>CALLER ID:(4545606:1|4321126:1)</CODE></TD>
+<TD><CODE>5</CODE></TD>
+<TD><CODE>6</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>2</TD>
+<TD><CODE>ATB3&N6A!</CODE></TD>
+<TD><CODE>%case</CODE></TD>
+<TD><CODE>60</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>3</TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>CONNECT</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>9</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>4</TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>NO CARRIER</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>10</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>5</TD>
+<TD><CODE>%goto</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>10</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>6</TD>
+<TD><CODE>ATA!</CODE></TD>
+<TD><CODE>%case</CODE></TD>
+<TD><CODE>60</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>7</TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>CONNECT</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>9</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>8</TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>NO CARRIER</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>10</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>9</TD>
+<TD><CODE>%ftn</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+</TR>
+
+<TR align="center" valign="center">
+<TD>10</TD>
+<TD><CODE>%stop</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+<TD><CODE>&nbsp;</CODE></TD>
+</TR>
+
+
+</TABLE><BR>
+
+<P>См. также <A HREF="regexp.html">Perl-совместимые регулярные выражения</A>.</P>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_sdl"></A></A>Каталог хронологии</H1>
+
+<P></A><U>Log</U> - в этом каталоге ведется история <A HREF="pollmgrdescr.html">Менеджера Прозвонок</A> (<CODE>polls.log</CODE>), TCP/IP Deamon'а (<CODE>ipdaemon.log</CODE>), периодического запуска внешних приложений (<CODE>cronapps.log</CODE>), протокол модемных (<CODE>line.log</CODE>) и TCP/IP (<CODE>ip_?.log</CODE>) линий почтовой системы, протоколы EMSI-данных (<CODE>emsi-line.log</CODE>) и результатов обработки <A HREF="scripts.html">скриптов</A> (<CODE>exec-line.log</CODE>) для линий, протоколы тарифов (<CODE>tariff.log</CODE>) и ошибок <A HREF="cfglogs.html">модуля тарификации</A> (<CODE>tariff.err</CODE>), протокол работы с <A HREF="ras.html">сервером удаленного доступа</A> (<CODE>ras.log</CODE>), отчет об активности тредов (<CODE>threads.txt</CODE>), а также дополнительные файлы хронологии.</P>
+
+<P>Имена некоторых файлов хронологии, заданные по умолчанию, могут быть изменены пользователем в группе <U>File Names</U> этой секции.</P>
+
+<H2>Дополнительные файлы хронологии</H2>
+
+<P>Кроме готовой текстовой хронологии, предназначенной для восприятия системным администратором, Радиус ведет также дополнительные файлы хронологии:</P>
+
+<TABLE cols=2 width=622>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>access_log</CODE></PRE>
+</TD>
+<TD width=83%>Общая хронология переданных файлов в стандарте NCSA</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>agent_log</CODE></PRE>
+</TD>
+<TD width=83%>Общая хронология типов удаленных почтовых систем в стандарте NCSA</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>binary_log</CODE></PRE>
+</TD>
+<TD width=83%>Общая хронология (в двоичном формате) сеансов связи и переданных данных</TD>
+</TR>
+</TABLE><BR>
+
+<P>Файлы <CODE>access_log</CODE> и <CODE>agent_log</CODE> доступны для анализа любым NCSA-совместимым анализатором статистики.</P>
+
+<P>Формат файла <CODE>binary_log</CODE> совместим с используемым в <I>T-Mail © Andy Elkin</I> и <I>BinkD © Dima Maloff</I>. Для обработки результатов этого файла можно воспользоваться утилитой <I>T-Hist © Michael Markowsky (2:5020/378@fidonet)</I>.</P>
+
+<h2>Способы работы с файлами хронологии</h2>
+
+<P>В пункте <B>Быстрое протоколирование</B> раздела <A HREF="cfgstartup.html">Конфигурация параметров запуска</A> содержится дополнительная информация, касающаяся способов работы с файлами хронологии.</P>
+
+<P>См. также <A HREF="pn.html">Каталоги</A> и <A HREF="fileboxes.html">Файл-боксы</A>.</P>
+
+</BODY>
+</HTML>

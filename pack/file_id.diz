@@ -1,0 +1,12 @@
+Radius Utilities Pack v4.011-08.01.2005.
+
+Consists of:
+
+radsvc.exe   - to run Radius as service
+tariff.pl,
+tariff.exe   - to analize tariff.log
+radxterm.rdl - adds terminal feature 
+               to Radius 4.010
+zlib.dll     - adds compress feature
+               to Radius 4.010 or later
+

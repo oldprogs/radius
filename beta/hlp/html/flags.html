@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_flags"></A>Внешние флаги</H1>
+
+<P>На закладке Flags диалогового окна <A HREF="mnuconfig.html">Config</A>/Externals настраивается обработка <A HREF="fileflags.html">внешних файл-флагов</A>. Наличие / отсутствие файл-флага может приводить к выполнению определенного действия: запуска внешней программы или перезагрузки Радиуса. Для этого в поле Execute command указывается командная строка запуска внешнего приложения, а в поле Flag - полный путь к файл-флагу (с опциональным префиксом), который сопоставляется данному приложению. Если путь не указан, предполагается, что файл-флаг находится в <A HREF="FLAGSDIR.HTML">каталоге флагов</A> Радиуса.</P>
+
+<P>Формат флагов (столбец flag):</P>
+
+<TABLE cols=2 width="100%">
+
+<TR VALIGN="top">
+<TD width=5>flag</TD>
+<TD width=*>- если существует (создан) флаг, удалить его и выполнить команду</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=5>?flag</TD>
+<TD width=*>- если существует (создан) флаг, выполнить команду без удаления флага</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=5>&flag</TD>
+<TD width=*>- если отсутствует (удален) флаг, создать его и выполнить команду</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=5>*flag</TD>
+<TD width=*>- если отсутствует (удален) флаг, выполнить команду без создания флага</TD>
+</TR>
+
+</TABLE>
+
+<P>В поле Execute command вместо строки запуска внешнего приложения допускается указывать следующие макросы:</P>
+
+<TABLE cols=2 width=565>
+
+<TR VALIGN="top">
+<TD width=15%>
+<PRE><CODE>%RESTART&lt;MSEC&gt;%</CODE></PRE>
+</TD>
+<TD width=85%>Перезагрузить Радиус с паузой в MSEC миллисекунд. Минимальное значение MSEC равно 5000. Если параметр &lt;MSEC&gt; не задан, то он принимается равным 5000. Данный макрос может использоваться с целью <A HREF="cfgremote.html">удаленного изменения настроек</A>, когда после загрузки нового <A HREF="textcfg.html">файла конфигурации</A> необходимо перезапустить Радиус.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=15%>
+<PRE><CODE>%STARTRAS%</CODE> /
+<CODE>%STOPRAS%</CODE></PRE>
+</TD>
+<TD width=85%>Запустить / прервать соединение посредством RAS. Настройки соединения определяются в <A HREF="ras.html">секции RAS DialUp</A> <A HREF="preferences.html">диалогового окна "Настройки"</A>. См. также <A HREF="atoms.html">атом</A> <U>RAS Event</U>.</TD>
+</TR>
+
+</TABLE>
+
+<P>Примеры:</P>
+
+<TABLE cols=3 width=100%>
+
+<TR VALIGN="top">
+<TD width=25%>Flag</TD>
+<TD width=25%>Execute command</TD>
+<TD width=50%>Комментарий</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><PRE>restart.flg</PRE></TD>
+<TD width=25%>%RESTART5000%</TD>
+<TD width=50%>Перезагрузить Радиус с паузой в 5с и удалить флаг</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=25%><PRE>?D:\FIDO\FLAGS\session.fail</PRE></TD>
+<TD width=25%>x:\path\my_service.bat</TD>
+<TD width=50%>Запустить внешнее приложение (пусть оно само и флаг удаляет)</TD>
+</TR>
+
+</TABLE>
+
+</BODY>
+</HTML>

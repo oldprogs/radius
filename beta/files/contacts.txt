@@ -1,0 +1,48 @@
+
+Official Radius Team:
+
+Denis Voituk
+   Status   : Programmer
+   FidoNet  : 2:5012/38, 2:550/5012
+   E-Mail   : radius<at>5076.ru
+   E-Mail   : radius<at>radius.pp.ru
+   ICQ UIN  : 72500474
+   Web      : http://radius.pp.ru
+   Phone    : +7-3522-469463 [06:00-20:00 MSK]
+
+Alexey Gradovtsev
+   Status   : Programmer
+   FidoNet  : 2:5030/1247.7
+   E-Mail   : agradov<at>rtc.ru
+
+Andrey Lipsky
+   Status   : Tester
+   FidoNet  : 2:450/237
+   E-Mail   : andrey<at>4enet.by
+   ICQ UIN  : 2518100
+
+Oleg Redut
+   Status   : Tester
+   FidoNet  : 2:5000/111
+   E-Mail   : OVR<at>Byte.Nsk.Su
+   ICQ UIN  : 28852595
+
+Dmitriy Panov
+   Status   : Tester
+   FidoNet  : 2:5063/79
+   E-Mail   : pannet<at>mail.ru
+   ICQ UIN  : 169959821
+
+Anton Gorlov
+   Status   : Tester
+   FidoNet  : 2:5059/37
+   E-Mail   : Pnz.Stalker<at>mail.ru
+   E-Mail   : gorlov<at>tl.ru
+   E-Mail   : Gor_lov<at>Sura.ru
+   ICQ UIN  : 236843933
+   Web      : www.gorlov.h11.ru
+   Phone    : +7-902-2070426 (CM)
+
+---
+If you want to add/change/remove the information to/in/from this list 
+simply send your request to Denis_Voituk@2:5012/38 or support@radius.pp.ru.

@@ -1,0 +1,642 @@
+ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+
+   Radius history by
+                      Denis Voituk [2:5012/38, deniska666@mail.ru]
+
+ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+Marks:
+
+[!] Huge addition or change.
+[+] Addition.
+[#] Change.
+[*] Interface fix/change.
+[-] Bugfix.
+
+ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.011 (??-???-2005)³ Current Alpha
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[#] Atoms names have been made readable, especially in Russian interface
+    (Aleksej R Serdyukov, 2:5020/24000)
+[-] Fixed a bug in TCP/IP daemon which caused incoming connections to be
+    counted incorrectly (thanks to Oleg Redut). Trying to avoid a rare
+    trap in debug mode when writing to enter.log. We will appreciate your
+    help in testing (radius.ini: [Main] LogWaitEvt=1)
+[+] Optional file-flags on connecting/disconnecting to Internet via
+    RAS dial-up, Config/Preferences/RAS DialUp
+    (Nikolay Pichtin, 2:5056/30)
+[#] Optional logging for aditional log-files in Config/Preferences/Logs.
+    To avoid logging of the file you don't need just remove the string
+    in the corresponding input field (Stanislav T. Kaschenko, 2:5020/166)
+[+] Dynamic retry time-out feature, Config/Polls/Options
+    (Stanislav T. Kaschenko, 2:5020/166)
+[-] Fixed a trap which followed on main window resizing when on Line tab
+[-] Fixed a small bug with Sounds atom (thanks to Alex Shakhaylo)
+[#] Relative paths are allowed in configuration options and BSO .?lo files
+    (Igor Romanovsky, 2:5022/60.1). The base path for relative paths
+    in configuration options is Home Directory. The base path for relative
+    paths in BSO .?lo files is Outbound directory. One shouldn't define
+    Home Directory as a relative path, as that is not the behaviour one
+    could expect
+[#] New option: Config/Polls/Initiate poll on 'Normal'.
+    "Prevent 'Direct' from initiating a poll" -> "Initiate poll on 'Direct'"
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.011 (28-Feb-2005)³ Alpha Version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Fixed bug with Visual Themes. This version should work on the systems
+    released earlier then WinXP.    
+
+[*] Added information about Alex Shakhaylo in the About Box.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.011 (10-Jan-2005)³ Alpha Version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[*] Cosmetic bugfix for those cases when Radius shows files remote wants 
+    to send to us.
+
+[-] Now Radius shows sizes greater then 1Gb in receive and send gauges.
+
+[*] Now Radius uses system icons for [+] and [-] in outbound viewer.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.011 (10-Jan-2005)³ Alpha Version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Now UserName and Password are saved correctly in RAS DialUp.
+
+[-] Bug in the built-in LogViewer is fixed.
+
+[-] Bug in the Setup dialog with select file dialog for chat sound.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.011 (09-Jan-2005)³ Alpha Version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] Ability to specify UserName and Password for RAS DialUp.
+
+[-] Tariffication module is fixed. Earlier it used only one period of time
+    in those cases when session lasted during several tariff intervals.
+    Some fixes and additions were added to tarif.pas module.
+    Try to test it and send me bug reports if any.
+
+[*] Some cosmetic fixes.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.011 (04-Jan-2005)³ Alpha version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] Added trayicon hint with a list of mailer lines and their statuses.
+
+[+] InfoPanel tan added. BadWazoo panel moved there, new Opened Lines 
+    panel is placed there too.
+    The idea and a part of code was taken from Taurus sources. 
+    
+[+] The list of events actual for the line this day is placed instead 
+    of BadWazoo panel in the line window when it is in the idle state.
+    The idea and a part of code also was taken from Taurus sources. 
+
+[-] MailerLine timer bug.
+
+[-] IniFile saving bug.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.010 (04-Jan-2005)³ New Year Release
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Many bugfixes.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.010 (Year 2004)³ Work together with Alex Shakhaylo [RadSoft]
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[!] Alex has writen many lines of code. Here is some of features added by 
+    him:
+    
+    Sound Events;
+    Hidden Mode + HotKey for it;
+    RAS Part of Radius is rewritten;
+    ZMH Event;
+    Scripts;
+    Callback;
+    Full 5D;
+    Fixes in Nodelist Compiler;
+    TAPI;
+    Immediate Changes in the Outbound Viewer;
+    Chat on Hydra and BinkP.
+
+    And many other useful things.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+<...time passed...>
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (29-Dec-2002)³ Post New Year Edition
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[#] Improved momental reaction on file-flags.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (29-Dec-2002)³ New Year Edition
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Outbound tree is now updated correctly. Fast reaction on changes in 
+    outbound has been removed.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (17-Dec-2002)³ Iconized Edition
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] Timediff is now shown when sinchronizing time on BinkP sessions.
+
+[*] New Icons added. Some old are refreshed.
+    Thanx to Sergey Odinokov (2:5012/38.12).
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (08-Dec-2002)³ R‘10
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Radius now doesn't trap on Win2k and WinNT when displaying 
+    error message window.
+
+[-] Now one can set 2 or more fileboxes. Changes in Node Inspector will
+    not affect on it.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (07-Nov-2002)³ RC9
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] New option in radius ini:
+
+  [main]
+  ;Wait for WaitRescanSecs before next rescan in outbound or other folders
+  WaitSecsRescan=2000
+
+[#] Hydra protocol changed. Thanx to Sergei Shumakov (2:5005/47)
+    Additional options in radius.ini:
+
+    [hydra]
+    ;Use both names: short and long
+    Short_and_Long_filename=1
+    ;OEM charset
+    OEM_CHARSET=1
+    TxWindow=0
+    RxWindow=0
+    ;Use debug log for Hydra
+    Debug=1
+
+[-] External apps are now saved correctly in radius.ini.
+    Thanx to Andrei Lavreniyuk (2:550/196).
+
+[*] New icons in some menus.
+    Thanx to Sergey Odinokov (2:5012/38.12).
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (30-Oct-2002)³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] HTML-help worked incorrectly. That was because of strange code in
+    forms.pas from Delphi7. Fixed.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (29-Oct-2002)³ XP Edition
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[!] Radius compiled with Delphi7.
+
+ -> Changes thanx to Delphi7:
+
+[*] XP extended Open File dialogs.
+
+[*] XP themes support.
+
+[*] Edit autocomplete feature.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (27-Oct-2002)³ RC7
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Radius doesn't trap under W2K when com-port is closed
+
+[-] Radius counter in the error message works now.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (22-Oct-2002)³ RC6
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] New param in radius.ini:
+
+     [Main]
+     OnClose=0
+
+    Can be one of 3 values: 0, 1, 2.
+
+    After user promts to close Radius the last will act according to the
+    OnClose value:
+
+    0: Radius will be closed without questions.
+    1: Radius will be minimized without questions.
+    2: Radius asks whether user wants to close Radius or not.
+
+    
+    All other values will be turnd to 0. Default value is 0.
+
+[*] Some pics are beautifulized %). (Thanks to 2:5012/38.12)
+
+[-] I beleave that the bug with time-on-line at multi-line systems
+    is fixed now.
+
+[-] I beleave that the bug at some systems with closed/used COM-port
+    is fixed now.
+
+[-] Now Full Outbound works correctly in RCC.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (24-Sep-2002)³ RC5
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Fixed trap when Radius found old compiled nodelist.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (15-Sep-2002)³ RC4
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] New parameters in radius.ini:
+
+     [main]
+     MainAddr=2:5012/38
+     MainReg=50
+
+    If you use net segment (with only one net and host) in addition to
+    nodelist or regional segment then set these params. In the other case
+    Radius will not be able to get the value of zone and region of your
+    net segment.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (14-Sep-2002)³ RC3
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] New parameters in radius.ini:
+
+     [system]
+     MutexName=ARGUS_SEMAPHORE
+     ActivateEventName=ARGUS_EVENT_ACTIVATE
+
+    Change these two values if you want to start another instance 
+    of Radius but be careful and do not touch it if you don't need to
+    start 2 or more instances of Radius!
+
+[-] Fixed bugs in Nodelist Browser.
+
+[-] Fast reaction on file-flags.
+
+[-] Radius now doesn't forget about auxiliary files.
+
+[-] Fixed one of the reasons of possible traps.
+
+[#] Now you can set full path to auxiliary files.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (05-Aug-2002)³ RC2
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[!] Compiling under Delphi5 with SP1.
+
+[-] Some traps removed.
+
+[*] No empty lines between RCC lines.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (24-Jun-2002)³ (bugfixes)
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] Radius didn't work after some errors. You could see it but all buttons
+    and commands were disabled. Fixed.
+
+[-] Some error messages (which were w/o buttons at all) look a bit
+    better. Strings are visible at all. The size of window is suitable for
+    message length.
+
+[+] If you click by left mouse button on those error messages they will
+    be closed.
+
+[+] ®¢ë© ¯ à ¬¥âà WinDlgTWait ¢ á¥ªæ¨¨ [Main] radius.ini. â® ¢à¥¬ï,
+    ç¥à¥§ ª®â®à®¥ ¡ã¤ãâ § ªàë¢ âìáï ­¥ª®â®àë¥ á®®¡é¥­¨ï ®¡ ®è¨¡ª å
+    (­-à, á®®¡é¥­¨¥ ® â®¬, çâ® ¯®àâ ­¥ ¤®áâã¯¥­).
+
+[+] New flag in node overrides: NRQ. This flag disables freqs 
+    for any node.
+
+[#] Inifile is updated. English is a default language.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (23-Jun-2002)³ 
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] New flags in node overrides: TxyF ¨ TxyFL. They are like Txy ¨ TxyL
+    but for FReq-Time.
+
+[-] In some places in code added check whether pointer points to NIL.
+
+[-] Fixed possible cause of Radius "stay-in-memory after close" bug.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (21-Jun-2002)³ 
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] Added ability to make FReqs from RCC.
+    
+[+] Added to make file-flags from RCC.
+
+[-] Nodelist Browser now correctly shows Regions with nets.
+    DON'T FORGET TO RECOMPILE YOUR NODELISTS!
+
+[#] Code is a bit optimized in some places.
+
+[+] New atom 'Accept Files Refuse Delete'. Lets automatic destructive 
+    file skip.
+
+[#] Atom 'Accept Files Forbidden' is called now 'Accept Files Delayed'.
+
+[-] Atom Interval Between Polls works now.
+
+[-] When Radius started it could disappear from the screen. It was
+    because of incorrect description of TWindowPlacement structure
+    in Delphi. Fixed.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (02-Jun-2002)³ Working under Remote Control
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[#] Remote Control COnsole now is like Maximus.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.009 (01-Jan-2002/³  Ah, God, how long I've slept!
+      /??-May-2002)³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[!] Remote Control based on Sergei Shumakov's (2:5005/47) works is added
+    To turn on Remote Control set the following params in radius.ini:
+
+      [remote]
+      enabled=1
+      pwd=password
+
+    If pwd is empty or/end enabled=0 then Remote Control is turned off.
+    To find out the information on console commands run Remote Control
+    and enter HELP command.
+[#] TLogger's ancestor is now TMemo. This change gave a possability to
+    copy any part of log which is displayed on the screen.
+[-] After Preferences dialog is closed all settings are to be in effect
+    immediately but because of bug user had to restart Radius. fixed.
+[+] Lines and TCP-IP Daemon can be now opened and closed directly from
+    tray.
+[-] Inherited bug: if you open outbound tab, click at the tree
+    using right mouse button, appears Smart Menu (TM), then
+    move mouse pointer up or down, the selection would move upper
+    or downer. fixed.
+[+] If you press right at the collapsed node item at Outbound tab
+    the node will open and if you press left it will close (if possible).
+[-] Added bugfixes by Sergei Shumakov (exAr+).
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.008 (??-???-2001)³ Beta2
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] Minimize/Restore using one click on TrayIcon.
+[-] If Line Log is used by another app then Radius remember all lines
+    of that logfile and adds them when log is freed.
+                                              (with the help of 2:5005/47)
+[+] Balloon ToolTips in tray under W2K.
+[+] Time difference between 2 systems is shown while synchronizing
+    the time.
+[-] Bug with Preferences dialog is fixed.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.008 (31-Jul-2001)³ Beta1 OlegON Edition
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[Changes by OK]:
+
+[#] Removed HintWindow with information about a station with which we have
+    a session.
+[+] Information about current session is shown now in the TaskBar in the
+    Radius icon.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.008 (22-Jul-2001)³ Beta: work is continued.
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[Changes by DV]:
+
+[-] Bug received from OlegON Mailer: when closing a Mirror-Form
+    all lines were closing. Fixed.
+[+] Setting Use Space to Flush Time-Out moved from binary config to
+    inifile.
+[-] Inherited bug: If logfile was locked by another program at the moment
+    when Radius had made an attempt to write to it then mailer
+    hadn't been writing to it since restart. Fixed.
+[#] InfoPanel with info about the SysOp of the remote station
+    now appears at the top of the screen.
+[+] Color of the InfoPanel now can be set in the IniFile.
+[#] Some minor shanges in Preferences dialog.
+[+] LngTools.Pas: added support for the elements of TComboBox type.
+[+] Added possability to change type help file (CHM or HLP) on-the-fly.
+[+] One click on the InfoPanel will close it.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.008 (??-Jun-2001)³ Beta1
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[!] Two projects: Radius and OlegON Mailer are united. I hope
+    from this moment we shall work together. (DV)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.008 (??-Jun-2001)³ OlegON Mailer 1.00b
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+! Changes by Oleg Koulaboukhov, made in OlegON Mailer which is base on !
+! Radius 4.007/Final.                                                  !
+
+[+] '#' external prefix - force run postprocessor immediately
+[#] 10-60 sec dialing limit removed
+[+] After extracting from Wazoo queque postprocessor run as after receiving
+[-] Bugs in Setiings saving in Preferences dialog fixed
+[+] When Argus is in normal state (not iconized) - tray hint shows current link
+[+] CPS hystogram for DialUp
+[-] Bugs in Run now button procedure in Externals dialog fixed
+[-] Prefixes in Flags processors not working as before, but processors can run
+    even you define this prefixes
+[-] Some debug procedures removed
+[*] FixedSys font replaced by Verdana
+[-] Particurarly fixed bug with duplicate rocessing flags (may be all OK)
+[+] Auxillary file with dialup links settings now can contain time in "human"
+    format, not only FTS.
+[+] Show free disk space at inbound directory
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (??-Jul-2001)³ SR3
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[-] In some case Radius could trap during address verification
+    in time syncronize procedure.
+
+[-] Toss Badwazoo really works now.
+
+[-] Removed some unused variables.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (17-Jun-2001)³ SR2
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+[+] New item in badwazoo menu "Toss badwazoo"
+
+[+] Finished work on clock synchronizing.
+
+[+] New column in BadWazoo viewer: Last Record. I.e. when was the last
+    download of this file.
+
+[+] URLs to Argus related sites.
+
+[-] Language fixes.
+
+[-] Fixed bug with Radius restart after closing. Afaiu this bug came from
+    Argus.
+
+[-] Fixed bug with "disappeared Radius" when Radius was restored from
+    maximized state.
+
+[?] I beleave that 2:5020/1970 will connect to the Radius project.
+    Some tasty features and fixes he had already prepared.
+    So let's wait for Radius 4.008.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (20-May-2001)³ final version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[-] I've fixed many tiny bugs.
+
+[+] Button "Delete BWZ line" in open line.
+
+[+] Time sinchronization with a difined node.
+    You have to add the following to radius.ini:
+
+    [main]
+    synch=6:6666/6666.6666
+
+    Your local time will be synchronized with 6:6666/6666.6666.
+    3D & 4D addresses are supported.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (07-May-2001)³ beta 4
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[ ] New fecho uplink. I believe you'll get this file.
+
+[-] Bugs with BWZList in Mirror: there was no real bwzlist, Radius trapped
+    when you tried to delete ASTAT.RAR from it.
+                                              (Dima Ukrainets, 2:5020/1938)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (05-May-2001)³ beta 3,5
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[-] Russian language fixes.
+
+[-] There was no reaction on changing the value of two options in
+    Polls Setup dialog (2:5012/47). Fixed.
+
+[-] Radius didn't properly save colours of Gauge and BWZ (2:5012/47). Fixed.
+
+[-] Radius didn't save values of counters in Polls Setup dialog
+    (2:5012/47). Fixed.
+
+[+] New options in Preferences: `Create SESSION.OK flag' and
+    `Create SESSION.FAIL flag'.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (02-May-2001)³ beta 3
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[!] Settings from Inifile are loaded once at startup and are reloaded
+    only when Inifile is changed. Please do not change Paths on-the-fly.
+    I didn't notice any bug in this case but I can't guarantee
+    a stable work of the program if you change any path on-the-fly.
+    But if you want to help me in testing this feature you may change
+    paths on-the-fly and if you notice any bug (or something strange
+    in the program's behaviour) please report it in my netmail.
+
+[+] Now [I beleave ;)] all the flags are moved from the HomeDir
+    to FlagsDir.
+
+[#] Preferences dialog is avaible again. It is more simple then in
+    earlier versions.
+
+[+] Now Radius notices flag's creation or deletion instantly.
+
+[-] Fixed bug with Direct as normal in Polls Setup
+
+[#] Standart colour of Paths is back.
+
+[+] New line in Paths: "Flags". I've just forgotten to put
+    it in v4.007b2. :-)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (08-Apr-2001)³ beta 2
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[+] Now Radius can create session.ok and session.fail flags in flagsdir
+    after successful or unsuccessful session. You can disable this by
+    setting the following in the inifile:
+
+      [main]
+      SessionOKFlag=0
+      SessionAbortedFlag=0
+
+[+] Atom "Interval between polls". It overrides the value of a retry var
+    from an inifile.
+
+[+] Separate r-emsi.log
+
+[-] Fixed a bug with a &filename.flg flag type.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (02-Apr-2001)³
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[!] Radius is now base on Argus 3.210. See. its history.*
+
+[+] Atom "Wait for connect". It overrides the value of a timedial var from
+    an inifile.
+
+[*] Some fixes in languages.
+
+[-] Externals didn't start from the "External tools" tab. Fixed.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+4.007 (25-Mar-2001)³ beta 1
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+[!] Many options are moved to inifile.
+
+[!] To start Radius not from homedir you need:
+
+    a) to put radius.ini to the dir from which you start Radius
+    b) to start Radius -I:<full path to inifile>
+
+    This appeared because of moving a path to home dir to inifile.
+
+[+] Now the width of columns in BadWazoo and Polls is saved.
+
+[+] MainWindow sizes are saved in inifile too:
+
+    [sizes]
+    MainForm=23,0,1032,744,1
+    ;        ³  ³  ³    ³  ÀÄ Window maximized (0-no, 1-yes)
+    ;        ³  ³  ³    ÀÄÄÄÄ Height
+    ;        ³  ³  ÀÄÄÄÄÄÄÄÄÄ Width
+    ;        ³  ÀÄÄÄÄÄÄÄÄÄÄÄÄ Top
+    ;        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ Left
+
+
+[*] "Open Line" moved to "Line".
+
+[#] All the flags MUST be in the FlagsDir (set in inifile).
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ

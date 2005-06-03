@@ -1,0 +1,15 @@
+Put this file to the Radius directory. Start this tool with the option /?.
+
+Output:
+
+----------------------------------------
+RADSVC usage help
+----------------------------------------
+RADSVC /install to install the service
+RADSVC /remove to uninstall the service
+RADSVC /? Help
+
+
+The executable filename MUST be radius.exe
+
+(c) Denis Voituk (2:5012/38@fidonet.org or deniska666@mail.ru)

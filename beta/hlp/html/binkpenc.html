@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_binkpenc"></A>Шифрованный сеанс связи BinkP</H1>
+
+<P>В шифрованном сеансе связи BinkP, передаваемый и принимаемый потоки шифруются алгоритмом DES/CBC с 56-битным ключом. Шифрование ведется на уровне между Transport Layer (TCP or Niagara) и Protocol Layer (<A HREF="binkp.html">BinkP</A>). Имейте ввиду, что шифрование несет нагрузку на CPU. Используемую программную реализацию алгоритма DES разработал Eric Young (eay@mincom.oz.au). Скорость шифрования потока составляет примерно 1 мегабайт в секунду на Pentium 120 MHz. Кроме того, для идентификации DES-ключей, используется RSA Data Security, Inc. MD5 Message-Digest Algorithm.</P>
+
+<P>Данный метод шифрования потока поддерживают только Аргус и Радиус. Однако в Радиусе существует возможность поддержки шифрованного сеанса связи, совместимого с BinkD (см. <A HREF="cfgprotocols.html">Настройка протоколов передачи</A>).</P>
+
+</BODY>
+</HTML>

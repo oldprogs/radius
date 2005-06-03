@@ -1,0 +1,68 @@
+# Example of Tariff.cfg
+#
+#Tariffs
+# --------------
+#Each tariff is defined by one line. A semicolon (;) is used as a delimiter.
+#Fields order:
+# Type;Direction;Number;Priod;PerHour;PerSentMB;PerReceivedMB
+#
+# where,
+#     Type      - connection (dial, ip)
+#     Direction - incoming/outgoiig/all (in,out,*)
+#     Number    - dial number/ip-address or first digits of number/ip,
+#                 f.e. (7-095-, 192.168).
+#     Period    - Current tariff usage time.
+#     PerHour   - One hour price
+#     PerSentMB - Outgoing 1 MB price
+#     PerReceivedMB - Incoming 1 MB price
+#
+# Tariff usage time must not pass midnight. 24 hours interval is defined by
+#  '*' symbol. Tariff usage times must not overlay. All overlayed # tariffs
+# will be summed during overlay interval.
+# Ajanced intervals must differ not less than 1 second, otherwise calculation
+# may be wrong. BTW, if intervals differ more than 1 second, calculation
+# result will aslo be not quite precisious.
+# You must use "18-23:59:59" form for intervals like 18:00-0:00.
+#
+# When writing "Number" field, use the same masks as you do in Argus. To see
+# the correct form look into Argus log - 10-Jul-2000 17:16:59 Dialling 413230.
+# Use complete ip-address or wildcards for ip-connections. But do not write
+# 192.168.* as 192.168 is enough.
+#
+# No currencies are used. You may think about anyone. But a comma (,) must
+# be used as a decimal point! Try not to mix time and traffic tariffing.
+#
+# You may watch tariffing results in Argus window durind session and also in
+# tariff.log file after session is finished. Traffic log file is created in
+# argus log directory. Tariff.err file is crerated in the log directory if
+# errors found during parsing.
+#
+# Tariffs are read once when Argus starts running.
+#
+#
+# Tariff example
+# ----------------------
+# dial;*;*;*;0;0;0
+# ip;*;*;*;0;0;0
+# dial;out;7095;0-7:59:59;5;0;0
+# dial;out;7095;8-17:59:59;10;0;0
+# dial;out;7095;18-23:59:59;7;0;0
+# ip;*;192.168.1;*;0;0;0
+# ip;out;*;0-7:59:59;7;0;0
+# ip;out;*;8-17:59:59;16.8;0;0
+# ip;out;*;18-23:59:59;14;0;0
+#
+# The first two tariffs must be always in use, as some time intervals may be
+# undefined.
+#
+
+# Outgoing traffic for IP sessions is free and incomming traffic costs 13 per 1mb.
+ip;*;*;*;0;0;13
+# All other dialup connections (i.e. incomming) are free.
+dial;*;*;*;0;0;0
+# Outgoing calls to all other numbers cost 7,2 per every minute
+dial;out;*;*;7,2;0;0
+# 'Phone number 440344 is free
+dial;out;440344;*;0;0;0
+# All IP-sessions from 192.168 (local area network is at no cost)
+ip;*;192.168;*;0;0;0

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+</OBJECT>
+
+<H1><A NAME="idh_fileflags"></A>Файл-флаги</H1>
+
+<P>Файл-флаг - это временный файл, находящийся в <A HREF="flagsdir.html">каталоге флагов</A> Радиуса. Используя файл-флаги, внешние программы или оператор могут управлять некоторыми действиями Радиуса.</P>
+
+<P>Список файл-флагов:</P>
+
+<TABLE cols=2 width=754 border=1>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>active.ip</CODE></PRE>
+</TD>
+<TD width=*>Указывает на то, что TCP/IP демон активен, то есть открыт. Это не означает наличие текущей сессии: демон может находиться в любом состоянии, в том числе ожидать входящего соединения.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>active.linename</CODE></PRE>
+</TD>
+<TD width=*>Указывает на то, что модемная линия активна, то есть открыта. Это не означает наличие текущей сессии: модемные линии могут находиться в любом состоянии, в том числе ожидать входящего соединения.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>close.ip</CODE></PRE>
+</TD>
+<TD width=*>Закрыть TCP/IP daemon.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>close.linename</CODE></PRE>
+</TD>
+<TD width=*>Закрыть модемную линию и освободить COM-порт. Например, для закрытия линии с названием "Line4", флаг должен называться "<CODE>close.Line4</CODE>"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>current.ip</CODE></PRE>
+</TD>
+<TD width=*>Указывает на то, что открыто хотя бы одно TCP/IP-соединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>dupovr.ok</CODE></PRE>
+</TD>
+<TD width=*>Импортировать файл дополнительных переопределений модемных линий.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>exit.now</CODE></PRE>
+</TD>
+<TD width=*>Выход. Идентичен пункту Exit меню System или Alt+X.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>ipovr.ok</CODE></PRE>
+</TD>
+<TD width=*>Импортировать файл дополнительных переопределений TCP/IP.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>nodelist.ok</CODE></PRE>
+</TD>
+<TD width=*>Компилировать список узлов. Идентичен пункту Compile Nodelist меню Tool или Shift-F6.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>open.ip</CODE></PRE>
+</TD>
+<TD width=*>Открыть TCP/IP daemon.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>open.linename</CODE></PRE>
+</TD>
+<TD width=*>Открыть модемную линию. Например, для открытия линии с названием "Line4", флаг должен называться "<CODE>open.Line4</CODE>"</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>password.ok</CODE></PRE>
+</TD>
+<TD width=*>Импортировать дополнительный файл паролей</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>session.ok</CODE></PRE>
+</TD>
+<TD width=*>Создается после успешного завершения сессии, если установлена соответствующая опция в <A HREF="cfgmain.html">секции Main</A> <A HREF="preferences.html">диалогового окна "Настройки"</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=17%>
+<PRE><CODE>session.fail</CODE></PRE>
+</TD>
+<TD width=*>Создается после неудачного завершения сессии, если установлена соответствующая опция в <A HREF="cfgmain.html">секции Main</A> <A HREF="preferences.html">диалогового окна "Настройки"</A>.</TD>
+</TR>
+
+</TABLE><BR>
+
+<P>Кроме перечисленных файл-флагов, Радиус имеет возможность обрабатывать <A HREF="flags.html">внешние флаги</A>, указанные в диалоговом окне <A HREF="mnuconfig.html">Config</A> /Externals</P>
+
+<P>См. также <A HREF="pn.html">Каталоги</A> и <A HREF="flags.html">Внешние флаги</A>.</P>
+
+</BODY>
+</HTML>

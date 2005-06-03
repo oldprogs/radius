@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_cfgipflg"></A>Специальные флаги TCP/IP</H1>
+
+<TABLE cols=2 width=642>
+
+<TR VALIGN="top">
+<TD width=20%>
+<CODE>TCP</CODE>
+</TD>
+<TD width=80%>В соответствии со стандартом IP-листа, этот флаг обязателен для любого TCP/IP узла, однако система Радиус снимает это ограничение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=20%>
+<CODE>IFC</CODE>
+</TD>
+<TD width=80%><A HREF="row.html">Raw</A> (ifcifo) (по умолчанию порт 60179)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=20%>
+<CODE>ITN, TEL или TELNET</CODE>
+</TD>
+<TD width=80%><A HREF="telnet.html">Telnet</A> (по умолчанию порт 23)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=20%>
+<CODE>IBN, BND или BINKD</CODE>
+</TD>
+<TD width=80%><A HREF="binkp.html">BinkP</A> (по умолчанию порт 24554)</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=20%>
+<CODE>PROXY</CODE>
+</TD>
+<TD width=80%>Обращаться к данному узлу через прокси, независимо от установки <U>All via proxy</U> закладки <U>General</U> окна <A HREF="cfgipdaemon.html">Диалог кофигурации TCP/IP Daemon</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=20%>
+<CODE>NOPROXY</CODE>
+</TD>
+<TD width=80%>Обращаться к узлу напрямую, минуя прокси. Данный флаг имеет приоритет над опцией <U>All via proxy</U>, устанавливаемой на закладке <U>General</U> окна <A HREF="cfgipdaemon.html">Диалог кофигурации TCP/IP Daemon</A>.</TD>
+</TR>
+
+</TABLE><BR>
+
+<P>См. также:
+
+<UL>
+	<LI><A HREF="introdaemon.html">TCP/IP Daemon</A><BR><BR></LI>
+
+	<LI><A HREF="cfgipdaemon.html">Диалог кофигурации TCP/IP Daemon</A><BR><BR></LI>
+</UL>
+
+</BODY>
+</HTML>

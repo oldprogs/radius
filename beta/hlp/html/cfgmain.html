@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_cfgmain"></A>Общие параметры</H1>
+
+<P>Здесь задаются общие настройки Радиуса.</P>
+
+<TABLE cols=3 width=754 border=1>
+
+<TR VALIGN="top">
+<TH>Параметр</TH>
+<TH>Описание</TH>
+<TH>Пример</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD>Main address</TD>
+<TD><A HREF="pn.html">Основной адрес</A></TD>
+<TD align=center valign=center>
+<CODE>2:5012/38</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Main region</TD>
+<TD>Основной регион. Этот параметр  используется в дополнение к основному адресу для определения принадлежности вашего узла к конкретной сети. Для России значение региона должно быть равно <B>50</B>.</TD>
+<TD align=center valign=center>
+<CODE>50</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Synch clock with</TD>
+<TD>Возможность синхронизации системного времени локальной машины с временем удаленного узла. Если узел указан, то при каждом сеансе связи с ним Радиус будет проверять и при необходимости корректировать локальное время. Поддерживается 3d- и 4d-формат FTN-адреса удаленного узла.</TD>
+<TD align=center valign=center>
+<CODE>2:5012/708</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Synch time shift</TD>
+<TD>Сдвиг в секундах между временем локального часового пояса и часового пояса удаленного узла, с которым производится синхронизация. Этот параметр позволяет синхронизировать время с узлом, расположенным в другом часовом поясе.</TD>
+<TD align=center valign=center>
+<CODE>0</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>CPS min bytes</TD>
+<TD>Минимальное количество переданных/полученных байт для расчета CPS и прогнозного времени сессии.</TD>
+<TD align=center valign=center>
+<CODE>16385</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>CPS min secs</TD>
+<TD>Минимальное количество времени в секундах от момента начала сессии для  расчета CPS и прогнозного времени сессии.</TD>
+<TD align=center valign=center>
+<CODE>11</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Max BSY age</TD>
+<TD>Максимальный срок действия флагов занятости удаленного узла (BSY) в секундах. По истечении указанного срока флаги BSY считаются старыми и могут быть удалены при помощи либо макроса <A HREF="cfgextcron.html">%DELBSY%</A>, либо <A HREF="atoms.html">атома</A> <U>Del Old *.BSY</U>. См. также <A HREF="bso.html">Буфер отправки системы Binkley</A>.</TD>
+<TD align=center valign=center>
+<CODE>259200</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Max BWZ age</TD>
+<TD>Максимальный период, после которого недопринятые файлы будут автоматически удаляться из <A HREF="sdti.html">временного каталога</A>. См. также <A HREF="badwazoo.html">Панель BadWaZOO</A>.</TD>
+<TD align=center valign=center>
+<CODE>259200</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Max UDL age</TD>
+<TD>Максимальный период, после которого будут сняты ручные паузы с прозвонок, установленные из меню <A HREF="mnupoll.html">Poll</A> / Pause. При установке этого параметра в <B>0</B> паузы с прозвонок сниматься не будут..</TD>
+<TD align=center valign=center>
+<CODE>0</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Outb. rescan</TD>
+<TD>Период сканирования <A HREF="sdo.html">каталога отправки</A> в миллисекундах.</TD>
+<TD align=center valign=center>
+<CODE>2000</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Msgs. autoclose</TD>
+<TD>Время в секундах, по истечении которого окна предупреждающих сообщений будут автоматически закрываться.</TD>
+<TD align=center valign=center>
+<CODE>15</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Use dynamic outbound</TD>
+<TD>Включить <A HREF="bsoext.html">режим динамический отправки</A>.</TD>
+<TD>
+&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>5d outbound</TD>
+<TD>Поддержка <A HREF="bsoext.html">5d буфера отправки системы Binkley</A>.</TD>
+<TD>
+&nbsp;
+</TD>
+</TR>
+
+
+<TR VALIGN="top">
+<TD>Create&nbsp;SESSION.OK&nbsp;fileflag<BR>
+Create&nbsp;SESSION.FAIL&nbsp;fileflag</TD>
+<TD>Возможность создавать <A HREF="fileflags.html">файл-флаги</A> SESSION.OK, SESSION.FAIL после успешного или неудачного завершения сеанса связи, соответственно. См. тж. пункт <B>Отсоединение</B> раздела <A HREF="mlrd.html">Окно линии почтовой системы</A>.</TD>
+<TD>&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Use Nodelist Data</TD>
+<TD>Проверять наличие <A HREF="cfgipflg.html">флагов TCP/IP</A> в <A HREF="oftnnodelist.html">списке узлов</A>. При включенной опции узлы, у которых таких флагов нет, считаются недоступными по TCP/IP. Радиус воспринимает следующие флаги TCP/IP из списка узлов: <CODE>IBN, BND, BNP, IFC, ITN, TEL</CODE>. При выключенной опции поддерживается прежнее поведение: даже если в списке узлов отсутствуют флаги TCP/IP, Радиус будет по умолчанию подставлять флаги <CODE>IBN, CM</CODE>. Следует иметь в виду, что все данные списка узлов перекрываются настройками <A HREF="cfgipdaemon.html">таблицы переопределений IP-узлов</A>. См. также <A HREF="cfgrefol.html">Прозвонка на узел только в его рабочее время</A>.
+</TD>
+<TD>&nbsp;</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Auto compile nodelists</TD>
+<TD>Автоматическая компиляция <A HREF="oftnnodelist.html">списка узлов</A> при любом изменении.</TD>
+<TD>&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Use SPACE to flush timeout</TD>
+<TD>Использовать для сброса интервала ожидания клавишу "пробел" вместо Ctrl+PdDn. См. тж. <A HREF="timeout.html">Панель времени ожидания</A> и <A HREF="hotkeys.html">Горячие клавиши</A>.</TD>
+<TD>&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Fixed retry timeout</TD>
+<TD>Алгоритм определения реальных значений <U>Stand-off minutes</U> и <U>Retry Seconds</U>. Если этот флажок установлен, берутся точные значения, указанные в <A HREF="cfgppolls.html">окне конфигурации параметров прозвонок</A>. Если не установлен, то Радиус работает по алгоритму, используемому в Аргусе: в качестве реального значения интервала используется случайное число в диапазоне от n*0.5 до n*1.5 (то есть+-50%). Например, при установленном в <U>Retry Seconds</U> значении 100 повторные прозвонки будут происходить со случайным интервалом от 50 до 150 секунд.</TD>
+<TD>
+&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Play Sounds</TD>
+<TD>Включить <A HREF="cfgsound.html">озвучиание событий</A>.</TD>
+<TD>&nbsp;
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Close button action</TD>
+<TD>Возможность настройки поведения Радиуса при нажатии на кнопку "Закрыть" ("крестика" в правом верхнем углу окна Радиуса):
+<UL>
+	<LI><B>Shutdown</B> - обычное поведение (выход из программы)</LI>
+	<LI><B>Ask for shutdown</B> - выдавать окно подтверждения выхода</LI>
+	<LI><B>Minimize to tray</B> - сворачивать Радиус в трей</LI>
+</UL>
+<TD align=center valign=center>
+<CODE>Shutdown</CODE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Min free space</TD>
+<TD>Минимально допустимый объем свободного дискового пространства в байтах в <A HREF="sdsi.html">парольном каталоге</A>.</TD>
+<TD align=center valign=center>
+<CODE>100</CODE>
+</TD>
+</TR>
+
+</TABLE><BR>
+  
+</BODY>
+</HTML>

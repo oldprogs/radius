@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_cfgtariff"></A>Модуль тарификации</H1>
+
+<P>Радиус имеет возможность вести подсчет и хронологию стоимости сессий на основе сформированных вами тарифных планов. Эта возможность активизируется установкой параметра <U>Use tariffication log</U>. При этом Радиус анализирует тарифные планы, задаваемые в файле конфигурации тарифов <CODE>tariff.cfg</CODE> (находящемся в <A HREF="hd.html">домашнем каталоге</A>), и записывает результаты подсчета тарифов в файл протокола <CODE>tariff.log</CODE> (в <A HREF="sdl.html">каталоге хронологии</A>). Кроме того, в каталоге хронологии создается файл <CODE>tariff.err</CODE>, в который помещаются сообщения об обнаруженных ошибках в тарифном плане.</P>
+
+<TABLE cols=2 width=754 border=1>
+
+<TR VALIGN="top">
+<TH>Параметр</TH>
+<TH>Описание</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD>Use tariffication log</TD>
+<TD>Включить модуль тарификации</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Tariffication per minute</TD>
+<TD>Поминутная (при установленном флажке) / посекундная (при снятом флажке) тарификация <SUP>*</SUP></TD>
+</TR>
+
+</TABLE><BR>
+
+<P>Информацию по настройке тарифных планов вы можете найти в разделе <A HREF="tariff.html">Тарифные планы</A>. Утилиты для обработки лог-файла тарифов поставляются отдельно от дистрибутива Радиуса в <A HREF="utilities.html">Пакете утилит для Радиуса</A> (Radius Utilities Pack).</P>
+
+<P>Авторские права на данный программный модуль принадлежат <a href="sergei.shumakov@altavista.net">Сергею Шумакову</a>, E-mail: sergei.shumakov@altavista.net, FidoNet: 2:5005/47.</P>
+
+<HR>
+<P><SUP>*</SUP>А Vladimir Bakhvaloff сказал, что при отключенной галке тарификация будет почасовая!</P><BR>
+
+
+</BODY>
+</HTML>

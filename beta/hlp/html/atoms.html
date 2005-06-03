@@ -1,0 +1,517 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_atoms"></A>Атомы</H1>
+
+<P>Атом - это частица события, влияющая на один параметр конкретной линии, к которой событие привязано.</P>
+
+<P>Поддерживаются следующие атомы:</P>
+
+<TABLE cols=2 width=754 border=1>
+<TR VALIGN="top">
+<TD width=35%><B>Accept BPS Efficiency Min</B><BR>
+(Допуск Эффективность Минимальная)</TD>
+<TD width=72%><U>Минимальная производительность в процентах на входящих соединениях</U>. Если во время действия этого атома значение BPS входящего соединения окажется меньше указанного, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=35%><B>Accept Callback Enable</B><BR>
+(Разрешить Callback Запросы)</TD>
+<TD width=72%><U>Разрешить обратный вызов</U>. Во время действия этого атома Радиус будет обрабатывать запросы <A HREF="callback.html">обратного вызова</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept CPS Value Min</B><BR>
+(Допуск CPS минимальный)</TD>
+<TD width=72%><U>Минимальная скорость передачи на входящих соединениях</U>. Если во время действия этого атома значение CPS входящего соединения окажется меньше указанного, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept CRAM Disabled</B><BR>
+(Допуск CRAM запретить)</TD>
+<TD width=72%><U>Запретить инициирование механизма <A HREF="crammd5.html">CRAM-MD5</A> на входящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Dummy-Z Disabled</B><BR>
+(Допуск Dummy-Z запретить)</TD>
+<TD width=72%><U>Запретить передачу пустого пакета на входящих соединениях на </U><A HREF="oftnwazoo.html">ZModem</A>. Если этот атом не активен (по умолчанию), в случае отсутствия файлов для передачи, на протоколе ZModem будет передан пустой PKT-файл. Передача такого файла является мерой обеспечения нормального проведения сеанса ZModem.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Duration Max</B><BR>
+(Допуск Длительность Максимальная)</TD>
+<TD width=72%><U>Максимальная продолжительность входящего сеанса связи в минутах</U>. После истечения указанного интервала времени произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept EMSI Disabled</B><BR>
+(Допуск EMSI запретить)</TD>
+<TD width=72%><U>Запретить использование протокола <A HREF="oftnemsi.html">EMSI</A> на входящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Files Required /
+Accept Files Delayed</b><BR>
+(Допуск Файлов Требуемые /
+Допуск Файлов Отложенные)</TD>
+<TD width=72%><U>Файлы, прием которых возможен / Файлы, прием которых следует отложить</U>. Чаще всего используются для запрещения в ZMH приема файлов,за исключением FTSC-0001-пакетов. Как и в настройках <A HREF="cfgextpp.html">обработчиков</A>, здесь действует макрос %ARCMAIL%.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Files Refuse Delete</B><BR>
+(Допуск Файлов Запрещенные Отказ)</TD>
+<TD width=72%><U>Файлы, удаляемые без приема</U>. Указанные в этом атоме файлы будут безвозвратно удалены без приема. Как и в настройках <A HREF="cfgextpp.html">обработчиков</A>, здесь действует макрос %ARCMAIL%.</P>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Count Public</B><BR>
+(Допуск Запросов Файлов Непарольных)</TD>
+<TD width=72%><U>Ограничение запрашиваемых файлов по числу для непарольных сеансов связи</U></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Count Pwd-Prot</B><BR>
+(Допуск Запросов Файлов Парольных)</TD>
+<TD width=72%><U>Ограничение запрашиваемых файлов по числу для парольных сеансов связи</U></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Disable</B><BR>
+(Запретить Файловые Запросы)</TD>
+<TD width=72%><U>Запретить отработку файловых запросов</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Duration Public</B><BR>
+(Допуск Запросов Длительность Непарольных)</TD>
+<TD width=72%><U>Ограничение запрашиваемых файлов по длительности сеанса связи для непарольных сеансов связи</U></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Duration Pwd-Prot</B><BR>
+(Допуск Запросов Длительность Парольных)</TD>
+<TD width=72%><U>Ограничение запрашиваемых файлов по длительности сеанса связи для парольных сеансов связи</U></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Size Public</B><BR>
+(Допуск Запросов Size Непарольных)</TD>
+<TD width=72%><U>Ограничение запрашиваемых файлов по суммарному размеру для непарольных сеансов связи</U></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FReq Size Pwd-Prot</B><BR>
+(Допуск Запросов Объем Парольных)</TD>
+<TD width=72%><U>Ограничение запрашиваемых файлов по суммарному размеру для парольных сеансов связи</U></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept FTS-0001 Disabled</B><BR>
+(Допуск FTS-0001 запретить)</TD>
+<TD width=72%><U>Запретить использование протокола FTS-0001 на входящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Hydra Disabled</B><BR>
+(Допуск Hydra запретить)</TD>
+<TD width=72%><U>Запретить использование протокола <A HREF="oftnhydra.html">Hydra</A> на входящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Link Required /</B>
+<b>Accept Link Forbidden</b><BR>
+(Допуск Протоколов Требуемые /
+Допуск Протоколов Запрещенные)</TD>
+<TD width=72%><U>Протоколы соединения, допустимые к приему / запрещенные для приема</U>. Используется для запрещения соединения без коррекции ошибок в определенное время. Протоколы перечисляются через пробел (например: HST ARQ).
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Niagara Disabled</B><BR>
+(Допуск Niagara запретить)</TD>
+<TD width=72%><U>Запретить использование протокола Niagara на входящих соединениях</U>. Niagara используется протоколом <A HREF="binkp.html">BinkP</A> (и <A HREF="binkpenc.html">шифрованным BinkP</A>) на модемных соединениях.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept No Incoming</B><BR>
+(Допуск Входящие запретить)</TD>
+<TD width=72%><U>Не принимать входящие соединения</U>. Во время активности этого атома коммуникационный порт используется только для исходящих звонков. В остальное время порт доступен другим приложениям.</TD>
+</TR>
+
+ <TR VALIGN="top">
+<TD width=28%><B>Accept Nodes Only Listed</B><BR>
+(Прием только известных)</TD>
+<TD width=72%><U>Допускать к приему только узлы, прописанные в нодлисте,
+в паролях или переопределениях</U>. Если во время действия этого атома иной узел попытается установить сеанс связи, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Nodes Only Pwd-Prot</B><BR>
+(Допуск Узлов Только-Парольных)</TD>
+<TD width=72%><U>Допускать к приему только парольные узлы</U>. Если во время действия этого атома непарольный узел попытается установить сеанс связи, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Accept Nodes Required /</b>
+<B>Accept Nodes Forbidden</B><BR>
+(Допуск Узлов Требуемые /
+Допуск Узлов Запрещенные)</TD>
+<TD width=72%><U>Схемы ограничений для входящих сессий: требуемые условия / условия запрета</U>. Атомы могут использоваться на крупных узлах для распределения суточной нагрузки. Эти атомы допускают использование <A HREF="addrmasks.html">масок</A>. См. также <A HREF="cfgrest.html">Схемы ограничения прозвонок</A>.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept Speed Min</B><BR>
+(Допуск Минимальная Скорость)</TD>
+<TD width=72%><U>Минимально допустимая скорость входящих соединений</U>. Если во время действия этого атома скорость входящего соединения окажется меньше указанной, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept ZModem Disabled</B><BR>
+(Допуск ZModem запретить)</TD>
+<TD width=72%><U>Запретить использование протокола <A HREF="oftnwazoo.html">ZModem</A>на входящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Accept YooHoo Disabled</B><BR>
+(Допуск YooHoo запретить)</TD>
+<TD width=72%><U>Запретить использование протокола YooHoo на входящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Chat Bell</B><BR>
+(Сигнал диалога)</TD>
+<TD width=72%><U>Проигрывать звуковой файл при запросе <A HREF="chat.html">чата</A> удаленной стороной</U>. Если в поле "File Name" не указан звуковой файл, звукового оповещения не будет. Этот атом перекрывает установки <A HREF="preferences.html">диалогового окна "Настройки"</A> (параметр <U>Chat Bell</U> <A HREF="cfgmain.html">секции Main</A>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Del Old *.BSY</B><BR>
+(Удалить старые *.BSY)</TD>
+<TD width=72%><U>Удалить старые файлы BSY</U>. См. также параметр <U>Max BSY Age</U> в <A HREF="cfgmain.html">секции Main</A> <A HREF="preferences.html">диалогового окна "Настройки"</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Disable Chat /</B>
+<B>Enable Chat</B><BR>
+(Запретить диалог /
+Разрешить диалог)</TD>
+<TD width=72%><U>Запретить / разрешить <A HREF="chat.html">чат</A> для указанных адресов.</U>. В поле "Nodes List" допускаются <A HREF="addrmasks.html">маски</A>. Эти атомы перекрывают установки <A HREF="preferences.html">диалогового окна "Настройки"</A> (флажок <U>Chat Enabled</U> <A HREF="cfgmain.html">секции Main</A>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Door</B><BR>
+(Сервис)</TD>
+<TD width=72%><U>Дополнительное приложение-сервис</U>. Добавляет дополнительный сервис, который будет использоваться в дополнение к указанным в <A HREF="cfgextsvc.html">Config/External/Doors</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Input Log Format <SUP>*</SUP></B><BR>
+(Форматирование Данных)</TD>
+<TD width=72%><U>Форматирование данных</U>. Этот атом сканирует входные данные и при соответствии регулярному выражению форматирует их и пишет в лог.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Input WatchDog ExtApp</B><BR>
+(Сканер - Внешнее приложение)</TD>
+<TD width=72%><U>Сканер - Внешнее приложение</U>. Атом сканирует пришедшие данные и при соответствии их регулярному выражению запускает внешнее приложение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Input WatchDog Reset</B><BR>
+(Сканер - Сброс)</TD>
+<TD width=72%><U>Сканер - сброс</U>. Атом сканирует пришедшие данные и при соответствии их регулярному выражению выполняет сброс линии.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Interval Between Polls</B><BR>
+(Интервал между прозвонками)</TD>
+<TD width=72%><U>Период между повторами прозвонки</U>. Атом перекрывает значение <U>Retry seconds</U>, установленное в <A HREF="cfgppolls.html">параметрах прозвонок</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Log EMSI Data</B><BR>
+(Хронология EMSI)</TD>
+<TD width=72%><U>Вести хронологию EMSI-данных</U>. Когда этот атом активен, Радиус записывает данные <A HREF="oftnemsi.html">EMSI</A> в специальный протокол EMSI-данных (<CODE>r-emsi.log</CODE>).</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Login Script</B><BR>
+(Скрипт)</TD>
+<TD width=72%><U>Запустить скрипт</U>. Этот атом позволяет передавать команды удаленной системе, ожидая ее реакции (например Login и Password на маршрутизаторе) перед началом сессии.
+Работает только на исходящих сессиях сразу после соединения модемов (Carrier 
+    Detected) при совпадении адреса удаленной системы с шаблоном, 
+    указанным в строке "Nodes List". В этом списке допустимы
+    <A HREF="addrmasks.html">маски</A>. В шаблонах могут использоваться <A HREF="regexp.html">регулярные выражения</A>. Дополнительная информация приведена в разделе <A HREF="scripts.html">Скрипты</A>.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Command Answer</B><BR>
+(Модем Команда Ответа)</TD>
+<TD width=72%><U>Командная строка ответа модема на входящий звонок</U>. Обычно используется для установки соединения требуемых протоколов в определенное время.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Command Hangup</B><BR>
+(Модем Команда Отсоединения)</TD>
+<TD width=72%><U>Командная строка модема для отсоединения</U>. Этот атом обычно применяется вместе с атомом Modem Command Init.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Command Info</B><BR>
+(Модем Команда Информации)</TD>
+<TD width=72%><U>Командная строка модема сбора информации</U>.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Command Init</B><BR>
+(Модем Команда Инициализации)</TD>
+<TD width=72%><U>Командная строка инициализации модема</U>. Обычно используется для запрещения включения динамика  модема в ночное время, либо для установки определенных протоколов по часовому расписанию.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Command Prefix</B><BR>
+(Модем Команда Префикс)</TD>
+<TD width=72%><U>Префикс командной строки модема набора номера</U>. Обычно используется для установки определенных протоколов для исходящих соединений, а также для работы через внутренние мини-АТС в ночном режиме.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Command Suffix</B><BR>
+(Модем Команда Суффикс)</TD>
+<TD width=72%><U>Суффикс командной строки модема для набора номера</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Disable Reinit</B><BR>
+(Запретить регулярную инициализацию модема)</TD>
+<TD width=72%><U>Запретить регулярную инициализацию модема</U>. Этот атом не разрешает инициализировать модем, находящийся в режиме ожидания. </TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Error Ext.App.</B><BR>
+(Ошибка модема - внешнее приложение)</TD>
+<TD width=72%><U>Внешнее приложение при ошибке модема</U>. Запускает внешнее приложение, если произошла ошибка инициализации модема.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Modem Script</B><BR>
+(Скрипт)</TD>
+<TD width=72%><U>Модемный скрипт</U>. Этот атом позволяет передавать команды модему, ожидая и обрабатывая его ответы. Атом срабатывает при совпадении ответа модема с шаблоном, указанным в поле "Modem response". В шаблонах могут использоваться <A HREF="regexp.html">регулярные выражения</A>. Дополнительная информация приведена в разделе <A HREF="scripts.html">Скрипты</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Password</B><BR>
+(Пароль)</TD>
+<TD width=72%><U>Дополнительный пароль</U>. Добавляет дополнительный пароль, который будет учитываться в дополнение к указанным в <A HREF="cfgpasswords.html">Config/Passwords</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>RAS Event</B><BR>
+(RAS Событие)</TD>
+<TD width=72%><U>Соединение посредством RAS</U>. Запуск соединения, настройки которого определены в <A HREF="ras.html">секции RAS DialUp</A> <A HREF="preferences.html">диалогового окна "Настройки"</A>. Данный атом позволяет подключаться к сети по заданному временному графику. Привязывать атом следует к модемным (dial-up) линиям. При этом подключение будет происходить в момент срабатывания события с атомом RAS Event, а отключение - по истечении периода действия события. Опция <U>HangUp when finished</U> предназначена для досрочного отключения от сети, как только <A HREF="outbtab.html">очередь отправки</A> окажется пуста. См. также <A HREF="flags.html">макросы %STARTRAS%, %STOPRAS%</A></TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Replace Modem</B><BR>
+(Заменить Модем)</TD>
+<TD width=72%><U>Замена всех установок модема, конфигурируемых в </U><A HREF="mnuconfig.html">Config</A><U> /Dialup / Modems</U>. Чаще всего применяется, когда модем обслуживает разные протоколы в зависимости от времени суток. При этом порт остается неизменным.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Replace Restriction</B><BR>
+(Заменить Ограничения)</TD>
+<TD width=72%><U>Замена схемы ограничения прозвонок, конфигурируемой в </U><A HREF="mnuconfig.html">Config</A><U> / Dialup / Restrictions</U>. Применяется вместо двух атомов Restriction Required и Restriction Forbidden.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Replace Station</B><BR>
+(Заменить Станцию)</TD>
+<TD width=72%><U>Замена всех установок станции, конфигурируемых в </U><A HREF="mnuconfig.html">Config</A><U> / Dialup / Station</U>. Обычно используется на узлах, выполняющих разные функции в разное время.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Response Log Format <SUP>*</SUP></B><BR>
+(Форматирование Ответов)</TD>
+<TD width=72%><U>Форматирование ответов</U>. Этот атом работает так же, как атом Input Log Format, но сканирует не все данные, а только ответы модема.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Restriction Required /</B>
+<B>Restriction Forbidden</B><BR>
+(Ограничения Требуемые /
+Ограничения Запрещенные)</TD>
+<TD width=72%><U>Строки необходимых / запрещенных условий прозвонок</U>. Применяются, например, для учета различной тарификации звонков в зависимости от времени суток, а также для учета особенности работы узлов (например, не работающих по праздникам).
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Rings</B><BR>
+(Звонки)</TD>
+<TD width=72%><U>Число звонков перед поднятием трубки для ответа модемом</U>. Значение 0 означает запрет поднятия трубки.
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Sounds Event</B><BR>
+(Звуки)</TD>
+<TD width=72%><U>Включить / выключить озвучивание событий</U>. Этот атом перекрывает установки <A HREF="cfgmain.html">секции Main</A> <A HREF="preferences.html">диалогового окна "Настройки"</A> (параметр <U>Play Sounds</U>), включая или выключая (в зависимости от состояния флажка <U>Sounds On/Off</U>) <A HREF="cfgsound.html">озвучивание событий</A>. Включением сигнала <A HREF="chat.html">чата</A> управляет отдельный атом <U>Chat Bell</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Traffic Shaper Incoming /</B>
+<B>Traffic Shaper Outgoing</B><BR>
+(Ограничение Трафик Входящий /
+Ограничение Трафик Исходящий)</TD>
+<TD width=72%><U>Ограничение скорости передачи для соединений по TCP/IP</U>. Во время действия этих атомов скорость приема / передачи по TCP/IP не будет подниматься выше значения, указанного в поле."BPS for Incoming / Outgoing Traffic". Эти атомы перекрывают установки <A HREF="cfgipdaemon.html">конфигурации TCP/IP Daemon</A> (параметры <U>Traffic shaper: In / Out</U>).
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Transmit BPS Efficiency Min</B><BR>
+(Передача Эффективность Максимальная)</TD>
+<TD width=72%><U>Минимальная производительность в процентах на исходящих соединениях</U>. Если во время действия этого атома значение BPS исходящего соединения окажется меньше указанного, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Transmit CPS Value Min</B><BR>
+(Передача CPS Минимальный)</TD>
+<TD width=72%><U>Минимальная скорость передачи на исходящих соединениях</U>. Если во время действия этого атома значение CPS исходящего соединения окажется меньше указанного, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Transmit CRAM Disabled</B><BR>
+(Передача CRAM Запретить)
+</TD>
+<TD width=72%><U>Запретить инициирование механизма <A HREF="crammd5.html">CRAM-MD5</A> на исходящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit Dummy-Z Disabled</b><BR>
+(Передача Dummy-Z Запретить)</TD>
+<TD width=72%><U>Запретить передачу пустого пакета на исходящих соединениях на </U><A HREF="oftnwazoo.html">ZModem</A>. Если этот атом не активен (по умолчанию), в случае отсутствия файлов для передачи, на протоколе ZModem будет передан пустой PKT-файл. Передача такого файла является мерой обеспечения нормального проведения сеанса ZModem.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Transmit Duration Max</B><BR>
+(Передача Длительность Максимальная)</TD>
+<TD width=72%><U>Максимальная продолжительность исходящего сеанса связи в минутах</U>. После истечения указанного интервала времени произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit EMSI Disabled</b><BR>
+(Передача EMSI Запретить)</TD>
+<TD width=72%><U>Запретить использование протокола <A HREF="oftnemsi.html">EMSI</A> на исходящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><B>Transmit Files Required /</B>
+<B>Transmit Files Forbidden</B><BR>
+(Передача Файлов Требуемые /
+Передача Файлов Запрещенные)</TD>
+<TD width=72%><U>Файлы, допустимые к передаче / запрещенные для передачи</U>. Как и в настройках <A HREF="cfgextpp.html">обработчиков</A>, здесь действует макрос %ARCMAIL%. Этот атом не распространяется на файлы с приоритетом Crash, а также на файлы, присоединенные обработчиком файловых запросов.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit Hydra Disabled</b><BR>
+(Передача Hydra Запретить)</TD>
+<TD width=72%><U>Запретить использование протокола <A HREF="oftnhydra.html">Hydra на исходящих соединениях</U></A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit Niagara Disabled</b><BR>
+(Передача Niagara Запретить)</TD>
+<TD width=72%><U>Запретить использование протокола Niagara на исходящих соединениях</U>. Niagara используется протоколом <A HREF="binkp.html">BinkP</A> (и <A HREF="binkpenc.html">шифрованным BinkP</A>) на модемных соединениях.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit Speed Min</b><BR>
+(Передача Скорость Минимальная)</TD>
+<TD width=72%><U>Минимально допустимая скорость исходящих соединений</U>. Если во время действия этого атома скорость исходящего соединения окажется меньше указанной, произойдет отсоединение.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit YooHoo Disabled</b><BR>
+(Передача YooHoo Запретить)</TD>
+<TD width=72%><U>Запретить использование протокола YooHoo на исходящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Transmit ZModem Disabled</b><BR>
+(Передача ZModem Запретить)</TD>
+<TD width=72%><U>Запретить использование протокола <A HREF="oftnwazoo.html">ZModem</A> на исходящих соединениях</U>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>Wait for Connect</b><BR>
+(Ожидание коннекта)</TD>
+<TD width=72%><U>Время ожидания соединения с удаленной системой</U>. Значение, указанное в этом атоме, перекрывает значение <U>Call seconds</U>, установленное в <A HREF="cfgppolls.html">параметрах прозвонок</A>.</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=28%><b>ZMH Event</b><BR>
+(ZMH событие)</TD>
+<TD width=72%><U>Включить режим ZMH</U>. Во время ZMH (Zone Mail Hour - почтовый час зоны) разрешается принимать и передавать только прямые почтовые пакеты (см. <A HREF="bso.html">Буфер отправки системы Binkley</A>). Данный атом перекрывает действие других атомов, разрешающих или запрещающих прием / передачу файлов (Accept Files Required, Transmit Files Required и т.д.)</TD>
+</TR>
+
+</TABLE><BR>
+
+<P>См. также:</P>
+
+<UL>
+	<LI><A HREF="cfgevents.html">События</A><BR><BR></LI>
+
+	<LI><A HREF="pollmgr.html">Менеджер прозвонок</A><BR><BR></LI>
+
+	<LI><A HREF="7.html">Конфигурируем Радиус</A></LI>
+</UL>
+
+<BR><HR>
+<P><SUP>*</SUP>Атом Response Log Format. Пример для ZyXEL U1496 E+ (основа взята из конфига от Vsevolod Fedotov для Bink/+)</P>
+
+<PRE><CODE>
+Dial-up/Modems/General | Commands : Info:
+
+        ATI2|
+
+Regular expression:
+
+        ZyXEL U-MODEM LINK STATUS REPORT\s*
+        Chars Sent *(\w+) *Chars Received *(\w+)\s*
+        Octets Sent *(\w+) *Octets Received *(\w+)\s*
+        Blocks Sent *(\w+) *Blocks Received *(\w+)\s*
+        Blocks Resent *(\w+) *Max Outstanding *(\w+)\s*
+        Max Block Size *(\w+) *Retrains Requested *(\w+)\s*
+        Link Duration *(\w+) *Retrains Granted *(\w+)\s*
+        T401 Timeouts *(\w+) *T402 Timeouts *(\w+)\s*
+        FCS Errors *(\w+) *Round Trip Delay *(\w+)\s*
+        Xmitter Underrun *(\w+) *Receiver overrun *(\w+)\s*
+        Last Speed/Protocol *(.+)\b\s*
+        Disconnect Reason *(.+)\b\s*
+
+
+Format Specifier:
+
+        Was $19 during $11 min, RTT=$16 T
+        Tx/Rx: $1/$2 chrs, $3/$4 octs, $5+$7/$6 blks
+        Retrains $10/$12, Timeouts $13/$14, FCS Errors $15, Overruns $17/$18
+        Disconnect reason: $20
+</CODE></PRE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_cfglogs"></A>Настройки хронологии</H1>
+
+<P>В этой секции задаются настройки, касающиеся записи данных хронологии Радиуса.</P>
+
+<TABLE cols=2 width=754 border=1>
+
+<TR VALIGN="top">
+<TH>Параметр</TH>
+<TH>Описание</TH>
+</TR>
+
+<TR VALIGN="top">
+<TD>ODBC logging</TD>
+<TD>Ведение хронологии посредством ODBC</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD>Log thread times</TD>
+<TD>Вести отчет об активности тредов (<CODE>threads.txt</CODE> в <A HREF="sdl.html">каталоге хронологии</A>).</TD>
+</TR>
+
+</TABLE><BR>
+
+
+<H2>Ведение хронологии посредством ODBC</H2>
+
+<P>Для включения этой возможности создайте в ODBC Data Source Administrator (Администратор источников данных ODBC) алиас "ArgusLog". В базе создайте таблицу "LogStrings" со следующими 
+    обязательными колонками: три текстового типа - "Logger", "RecTag" 
+    и "RecMsg" - и одну типа дата/время "RecTime". Вы можете также создать 
+    дополнительную колонку, содержащую автоматически увеличивающийся номер
+    ряда, но убедитесь, что значения этой колонки будет устанавливаться
+    автоматически. Для добавления записей Радиус выполняет следующее 
+    SQL-выражение:</P>
+
+<PRE><CODE> INSERT INTO LogStrings (Logger, RecTag, RecTime, RecMsg) VALUES (?, ?, ?, ?)</CODE></PRE>
+
+<P>    Для создания таблицы LogStrings в MS Access можно выполнить следующее
+    SQL-выражение:</P>
+        
+<PRE><CODE>       create table LogStrings (
+         RecId   counter NOT NULL CONSTRAINT RecIdIndex PRIMARY KEY,
+         Logger  char(20) NOT NULL,
+         RecTag  char(1) NOT NULL,
+         RecTime date NOT NULL,
+         RecMsg  char(250) NOT NULL);</CODE></PRE>
+  
+<P>    Затем в <A HREF="mnuconfig.html">Config</A>/Start-up включите "ODBC logging" и перезагрузите Радиус.
+    Ошибки ODBC будут записываться в файл "odbcerr.log" в <A HREF="sdl.html">каталоге хронологии</A> Радиуса.</P>
+  
+</BODY>
+</HTML>
+

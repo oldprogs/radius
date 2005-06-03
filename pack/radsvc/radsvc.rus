@@ -1,0 +1,17 @@
+Способ применения:
+Положить в каталог Радиуса. Запустить с параметром /?.
+
+Выдаст:
+
+----------------------------------------
+RADSVC usage help
+----------------------------------------
+RADSVC /install to install the service
+RADSVC /remove to uninstall the service
+RADSVC /? Help
+
+
+Условие: имя исполнительного файла должно быть непременно radius.exe
+
+По всем вопросам обращаться:
+Denis Voituk (2:5012/38@fidonet.org или deniska666@mail.ru)

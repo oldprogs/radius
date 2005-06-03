@@ -1,0 +1,78 @@
+Radius tariff statistics generator v. 4.010d (C) Alexey Gradovtsev, 2003-2004
+
+
+COPYRIGHT NOTICE
+
+This program is being distributed as freeware. It may be used, distributed
+and modified by anyone, as long as this notice remain intact. This program 
+is being distributed "as is" and without warranty of any kind. In no event 
+shall I incur a liability for any damages, losses and/or fatal consequences 
+of the program's action.
+
+
+DESCRIPTION
+
+Usage:  tariff.exe  [-Option_1 [-Option_2 ...]]
+or:     tariff.exe  [--Option_1 [--Option_2 ...]]
+
+NOTICE: As for tariff.pl PERL script, it uses the same command-line options.
+You may use it, too. All the information about tariff.exe below is applicable
+to the script as well.
+
+Options:
+ ? | h          This help info.
+ l Log_name     Name of Radius logfile to process.
+		Default: tariff.log (in the current directory).
+ o Output_file  Name of a file to write statistics to. If equal to STDOUT or
+                hyphen (-), the statistics is written to the standard output.
+		Default: tariff.stat (in the current directory).
+ p Period_1[,Period_2,...Period_n]
+                Date and time interval (intervals) to process log data within.
+                Period format: DAY.HOUR:MIN-DAY.HOUR:MIN
+                where DAY - number of days ago from the current date (0 defines
+                today), HOUR:MIN - time at the date specified. Keyword ALL
+                forces to process all the log file. You are also allowed to use
+                keywords TODAY, YESTERDAY instead of numeric DAY value.
+		Default: All.
+ n Node_1[,Node_2,...Node_n]
+                FTN addresses, in 4d-format, of those nodes to gather
+                statistics about. Keyword ALL forces statistics gathering about
+                all the nodes found. Keyword NONE can be used to output summary
+                statistics only.
+		Default: All.
+ f Cost_factor  Rate of exchange: IP_currency/Dial-up_currency. It is used to
+                compute IP-sessions cost using Radius-log tariffs, by formula:
+                        IP_cost = cost_factor*IP_tariff
+		Default: 1.
+
+
+EXAMPLES
+
+  tariff.exe -f 1
+  tariff.exe -f 0.7 -o STDOUT
+  tariff.exe -n 2:550/5012.0,2:5030/1247.7 -f 1 -n 2:5004/60.31
+  tariff.exe -p 21.17:20-21.17:25,Yesterday.00:00-Today.24:0
+  tariff.exe -p All -n All -l tariff.log -o tariff.stat -f 30.00
+
+NOTICE: You are allowed to use "=" symbol before parameters value, e.g.:
+
+  tariff.exe -p=All -n=All -l tariff.log -o=tariff.stat -f 30.00
+
+
+POSSIBLE BUGS
+
+The program's results were not tested enough to prove their correctness
+when analysing time periods which cross boundaries of daylight saving 
+changes. If you run into some problems using the program, please send me
+a report with a detailed description of the bug.
+
+NOTICE: As for tariff.pl PERL script, it has been proved that the script
+does not behave correctly under circumstances described. Now trying 
+to find out if results of tariff.exe are more accurate.
+
+
+THANKS TO:
+
+Denis Voituk (E-mail: fido5012@zaural.net, FidoNet: 2:550/5012)
+Sergey Kuznetsov (E-mail: dj_grey@pochta.ws, FidoNet: 2:5004/60.31)
+Slava Jelev (E-mail: jelev@rambler.ru, FidoNet: 2:469/125.26)

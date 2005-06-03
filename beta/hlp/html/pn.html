@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1251">
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<H1><A NAME="idh_pn"></A>Каталоги</H1>
+
+<P>Для того чтобы система Радиус<B> </B>могла функционировать, ей необходимо знать пути к определенным файлам, а так же к каталогу для входящей и исходящей почты и т.д. Настройка путей системы осуществляется в диалоговом окне <A HREF="mnuconfig.html">Config</A> / Paths.</P>
+
+<P>В этой главе описываются каталоги, с которыми работает Радиус:</P>
+
+<A HREF="hd.html">Домашний каталог</A>, <A HREF="configdir.html">Каталог конфигурации</A>, <A HREF="sdsi.html">Парольный каталог</A>, <A HREF="sdii.html">Непарольный каталог</A>, <A HREF="sdti.html">Временный каталог</A>, <A HREF="sdo.html">Каталог отправки</A>, <A HREF="sdl.html">Каталог хронологии</A> и <A HREF="flagsdir.html">Каталог флагов</A>. </P>
+
+<P>Эти каталоги могут быть расположены в <A HREF="hd.html">Домашнем каталоге</A>. В этом случае пути к ним можно указывать не полностью (<CODE>C:\FIDO\RADIUS\LOG</CODE>), а относительно Домашнего каталога (<CODE>LOG</CODE>). То есть, если в строке пути служебного каталога не указан диск, то путь к нему считается относительным и строится из Домашнего каталога. Если строка пути начинается с косой черты, то путь строится из корневого каталога того же диска, на котором расположен Домашний каталог. Если в строке пути к служебному каталогу диск указан, то такой путь считается абсолютным и не зависит от Домашний каталог.</P>
+
+<P>Пример  трансляций записей таблицы Special Directories в строки пути. Пути строятся с учетом Домашний каталог C:\FIDO\Radius.</P>
+
+<TABLE cols=2 width=298>
+
+<TR VALIGN="top">
+<TD width=36%>Запись</TD>
+<TD width=64%>Транслируется в</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>
+<PRE><CODE>LOG</CODE></PRE>
+</TD>
+<TD width=64%>
+<PRE><CODE>C:\FIDO\Radius\LOG</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>
+<PRE><CODE>IN\SEC</CODE></PRE>
+</TD>
+<TD width=64%>
+<PRE><CODE>C:\FIDO\Radius\IN\SEC</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>
+<PRE><CODE>\IN\PROT</CODE></PRE>
+</TD>
+<TD width=64%>
+<PRE><CODE>C:\IN\PROT</CODE></PRE>
+</TD>
+</TR>
+
+<TR VALIGN="top">
+<TD width=36%>
+<PRE><CODE>R:\FL\OUT</CODE></PRE>
+</TD>
+<TD width=64%>
+<PRE><CODE>R:\FL\OUT</CODE></PRE>
+</TD>
+</TR>
+</TABLE><BR>
+
+<H2><A NAME="idht_cfgpndefzone"></A>Основной адрес</H2>
+
+<P>В поле ввода Main AKA (основной адрес) Вы должны указать 3d или 4d FTN-адрес, которому по умолчанию будет соответствовать каталог, указанный в поле <A HREF="sdo.html">Outbound</A> списка каталогов (например, адрес, начинающийся с '<B>2:</B>', регионально соответствует Евроазиатскому континенту в сети FidoNet).</P>
+
+<P>См. также <A HREF="bso.html">Буфер отправки системы Binkley</A> и <A HREF="fileboxes.html">файл-боксы</A>.</P>
+
+</BODY>
+</HTML>

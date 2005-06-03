@@ -1,0 +1,15 @@
+1. If you update from the other Argus clone or Argus 
+   or from Radius version less than 4.009-06/23/2002
+   then you SHOULD *recompile* your nodelists!!
+
+2. Starting from Radius 4.011-03/06/2005 there have
+   been made some changes concerning outbound and
+   polls behaviour. Check your Radius configuration
+   in Config/Polls/Options to avoid possible problems.
+
+3. You should add radius.map which comes in _this_
+   archive in the same directory with radius.exe.
+   In other case your bug reports with traps.log
+   will be ignored.
+   NB: radius.map and radius.exe _must_ be from
+   the same archive.

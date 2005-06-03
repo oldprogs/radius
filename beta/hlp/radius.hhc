@@ -1,0 +1,675 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ExWindow Styles" value="0x6100">
+	<param name="Window Styles" value="0xc01223">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&times;&ograve;&icirc; &ograve;&agrave;&ecirc;&icirc;&aring; &Dstrok;&agrave;&auml;&egrave;&oacute;&ntilde;?">
+		<param name="Local" value="html/intro.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&icirc;&auml;&auml;&aring;&eth;&aelig;&ecirc;&agrave; &igrave;&iacute;&icirc;&atilde;&icirc;&ccedil;&agrave;&auml;&agrave;&divide;&iacute;&icirc;&eacute; &eth;&agrave;&aacute;&icirc;&ograve;&ucirc; Win32">
+			<param name="Local" value="html/intronative.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Igrave;&iacute;&icirc;&atilde;&icirc;&euml;&egrave;&iacute;&aring;&eacute;&iacute;&icirc;&ntilde;&ograve;&uuml;">
+			<param name="Local" value="html/intromulti.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&icirc;&auml;&auml;&aring;&eth;&aelig;&ecirc;&agrave; TCP/IP">
+			<param name="Local" value="html/introtcp.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="TAPI">
+			<param name="Local" value="html\tapi.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Ntilde;&eth;&aring;&auml;&agrave; &Dstrok;&agrave;&auml;&egrave;&oacute;&ntilde;&agrave;">
+		<param name="Local" value="html\env.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Atilde;&euml;&agrave;&acirc;&iacute;&icirc;&aring; &igrave;&aring;&iacute;&thorn;">
+			<param name="Local" value="html/mnu.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; System">
+				<param name="Local" value="html/mnusystem.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; Line">
+				<param name="Local" value="html/mnuline.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; Poll">
+				<param name="Local" value="html/mnupoll.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; Config">
+				<param name="Local" value="html/mnuconfig.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; Tool">
+				<param name="Local" value="html/mnutool.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; Help">
+				<param name="Local" value="html\mnuhelp.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Icirc;&ecirc;&iacute;&icirc; &euml;&egrave;&iacute;&egrave;&egrave; &iuml;&icirc;&divide;&ograve;&icirc;&acirc;&icirc;&eacute; &ntilde;&egrave;&ntilde;&ograve;&aring;&igrave;&ucirc;">
+			<param name="Local" value="html/mlrd.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; &icirc;&aelig;&egrave;&auml;&agrave;&iacute;&egrave;&yuml;">
+				<param name="Local" value="html\timeout.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&ecirc;&iacute;&icirc; &otilde;&eth;&icirc;&iacute;&icirc;&euml;&icirc;&atilde;&egrave;&egrave;">
+				<param name="Local" value="html/guilog.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&iacute;&auml;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth;&ucirc; &agrave;&ecirc;&ograve;&egrave;&acirc;&iacute;&icirc;&ntilde;&ograve;&egrave; &igrave;&icirc;&auml;&aring;&igrave;&agrave;">
+				<param name="Local" value="html/guiterm.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&iacute;&auml;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; &ntilde;&egrave;&atilde;&iacute;&agrave;&euml;&icirc;&acirc; &igrave;&icirc;&auml;&aring;&igrave;&agrave;">
+				<param name="Local" value="html/guilamps.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&iacute;&ocirc;&icirc;&eth;&igrave;&agrave;&ouml;&egrave;&icirc;&iacute;&iacute;&agrave;&yuml; &iuml;&agrave;&iacute;&aring;&euml;&uuml; &oacute;&auml;&agrave;&euml;&aring;&iacute;&iacute;&icirc;&atilde;&icirc; &oacute;&ccedil;&euml;&agrave;">
+				<param name="Local" value="html/guistatinfo.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&iacute;&auml;&egrave;&ecirc;&agrave;&ograve;&icirc;&eth; &iuml;&eth;&icirc;&atilde;&eth;&aring;&ntilde;&ntilde;&agrave; &iuml;&eth;&egrave;&aring;&igrave;&agrave;/&iuml;&aring;&eth;&aring;&auml;&agrave;&divide;&egrave;">
+				<param name="Local" value="html/guipie.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&iacute;&aring;&euml;&uuml; BadWaZOO">
+				<param name="Local" value="html/badwazoo.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Igrave;&aring;&iacute;&aring;&auml;&aelig;&aring;&eth; &iuml;&eth;&icirc;&ccedil;&acirc;&icirc;&iacute;&icirc;&ecirc;">
+			<param name="Local" value="html/pollmgrdescr.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&aring;&auml;&aelig;&aring;&eth; &iuml;&eth;&icirc;&ccedil;&acirc;&icirc;&iacute;&icirc;&ecirc;">
+				<param name="Local" value="html/pollmgr.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&iacute;&thorn; &oacute;&iuml;&eth;&agrave;&acirc;&euml;&aring;&iacute;&egrave;&yuml; &iuml;&eth;&icirc;&ccedil;&acirc;&icirc;&iacute;&ecirc;&agrave;&igrave;&egrave;">
+				<param name="Local" value="html/popupmenu.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Aacute;&oacute;&ocirc;&aring;&eth; &icirc;&ograve;&iuml;&eth;&agrave;&acirc;&ecirc;&egrave;">
+			<param name="Local" value="html\outbound.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Aacute;&oacute;&ocirc;&aring;&eth; &icirc;&ograve;&iuml;&eth;&agrave;&acirc;&ecirc;&egrave;">
+				<param name="Local" value="html/outbtab.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Outbound SmartMenu">
+				<param name="Local" value="html/smartmenu.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&eth;&icirc;&divide;&aring;&aring;">
+			<param name="Local" value="html\dialogs.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ograve;&aring;&eth;&igrave;&egrave;&iacute;&agrave;&euml;">
+				<param name="Local" value="html/terminal.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&times;&agrave;&ograve;">
+				<param name="Local" value="html\chat.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&aacute;&ccedil;&icirc;&eth; &ntilde;&iuml;&egrave;&ntilde;&ecirc;&agrave; &oacute;&ccedil;&euml;&icirc;&acirc;">
+				<param name="Local" value="html\nodebrowse.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&ecirc;&iacute;&icirc; &acirc;&acirc;&icirc;&auml;&agrave; &agrave;&auml;&eth;&aring;&ntilde;&agrave;">
+				<param name="Local" value="html\addrinput.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Dstrok;&aring;&auml;&agrave;&ecirc;&ograve;&icirc;&eth; &ocirc;&agrave;&eacute;&euml;&icirc;&acirc;&ucirc;&otilde; &ccedil;&agrave;&iuml;&eth;&icirc;&ntilde;&icirc;&acirc;">
+				<param name="Local" value="html\freqedit.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&ograve;&iuml;&eth;&agrave;&acirc;&ecirc;&agrave; &ecirc;&icirc;&igrave;&agrave;&iacute;&auml; &igrave;&icirc;&auml;&aring;&igrave;&oacute;">
+				<param name="Local" value="html\sendmdmcmd.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ograve;&ecirc;&egrave; &acirc;&acirc;&icirc;&auml;&agrave; &ntilde;&ograve;&eth;&icirc;&ecirc;">
+				<param name="Local" value="html/guigrid.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Iuml;&icirc;&auml;&auml;&aring;&eth;&aelig;&egrave;&acirc;&agrave;&aring;&igrave;&ucirc;&aring; &ntilde;&ograve;&agrave;&iacute;&auml;&agrave;&eth;&ograve;&ucirc; &egrave; &ograve;&aring;&otilde;&iacute;&icirc;&euml;&icirc;&atilde;&egrave;&egrave;">
+		<param name="Local" value="html/ftn.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&eth;&egrave;&iacute;&ouml;&egrave;&iuml;&ucirc; &agrave;&ntilde;&egrave;&iacute;&otilde;&eth;&icirc;&iacute;&iacute;&icirc;&eacute; &iuml;&aring;&eth;&aring;&auml;&agrave;&divide;&egrave;">
+			<param name="Local" value="html/async.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&agrave;&eth;&agrave;&igrave;&aring;&ograve;&eth;&ucirc; &euml;&egrave;&iacute;&egrave;&egrave;">
+				<param name="Local" value="html/asyncline.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&oslash;&egrave;&aacute;&ecirc;&egrave; &iuml;&aring;&eth;&aring;&auml;&agrave;&divide;&egrave;">
+				<param name="Local" value="html/asyncerr.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ograve;&eth;&icirc;&euml;&uuml; &iuml;&icirc;&ograve;&icirc;&ecirc;&agrave; &auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+				<param name="Local" value="html/asyncflow.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&icirc;&auml;&auml;&aring;&eth;&aelig;&egrave;&acirc;&agrave;&aring;&igrave;&ucirc;&aring; FTN-&ntilde;&ograve;&agrave;&iacute;&auml;&agrave;&eth;&ograve;&ucirc;">
+			<param name="Local" value="html/oftn.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&iuml;&egrave;&ntilde;&icirc;&ecirc; &oacute;&ccedil;&euml;&icirc;&acirc; FTS-0005">
+				<param name="Local" value="html/oftnnodelist.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ocirc;&euml;&agrave;&atilde;, &oacute;&ecirc;&agrave;&ccedil;&ucirc;&acirc;&agrave;&thorn;&ugrave;&egrave;&eacute; &acirc;&eth;&aring;&igrave;&yuml; &eth;&agrave;&aacute;&icirc;&ograve;&ucirc; &oacute;&ccedil;&euml;&agrave; (FSC-0062)">
+				<param name="Local" value="html/oftnonline.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&eth;&icirc;&ograve;&icirc;&ecirc;&icirc;&euml; &ntilde;&icirc;&aring;&auml;&egrave;&iacute;&aring;&iacute;&egrave;&yuml; EMSI (FSC-0056)">
+				<param name="Local" value="html/oftnemsi.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="WaZOO-&ntilde;&aring;&ntilde;&ntilde;&egrave;&yuml; &egrave; &ocirc;&agrave;&eacute;&euml;&icirc;&acirc;&ucirc;&aring; &ccedil;&agrave;&iuml;&eth;&icirc;&ntilde;&ucirc; (FTS-0006)">
+				<param name="Local" value="html/oftnwazoo.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&eth;&icirc;&ograve;&icirc;&ecirc;&icirc;&euml; &Atilde;&egrave;&auml;&eth;&agrave; (FSC-0072)">
+				<param name="Local" value="html/oftnhydra.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&eth;&icirc;&ograve;&icirc;&ecirc;&icirc;&euml;&ucirc;, &icirc;&ntilde;&iacute;&icirc;&acirc;&agrave;&iacute;&iacute;&ucirc;&aring; &iacute;&agrave; TCP/IP">
+			<param name="Local" value="html/protocol.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&eth;&icirc;&ograve;&icirc;&ecirc;&icirc;&euml; Raw">
+				<param name="Local" value="html\row.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&eth;&icirc;&ograve;&icirc;&ecirc;&icirc;&euml; Telnet">
+				<param name="Local" value="html\telnet.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&eth;&icirc;&ograve;&icirc;&ecirc;&icirc;&euml; BinkP">
+				<param name="Local" value="html/binkp.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Oslash;&egrave;&ocirc;&eth;&icirc;&acirc;&agrave;&iacute;&iacute;&ucirc;&eacute; &ntilde;&aring;&agrave;&iacute;&ntilde; BinkP">
+				<param name="Local" value="html/binkpenc.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&eth;&icirc;&divide;&aring;&aring;">
+			<param name="Local" value="html/csi.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Aacute;&oacute;&ocirc;&aring;&eth; &icirc;&ograve;&iuml;&eth;&agrave;&acirc;&ecirc;&egrave; &ntilde;&egrave;&ntilde;&ograve;&aring;&igrave;&ucirc; Binkley">
+				<param name="Local" value="html/bso.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Dstrok;&agrave;&ntilde;&oslash;&egrave;&eth;&aring;&iacute;&egrave;&yuml; &aacute;&oacute;&ocirc;&aring;&eth;&agrave; Binkley">
+				<param name="Local" value="html\bsoext.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ocirc;&agrave;&eacute;&euml;-&aacute;&icirc;&ecirc;&ntilde;&ucirc;">
+				<param name="Local" value="html/fileboxes.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&aacute;&eth;&agrave;&ograve;&iacute;&ucirc;&eacute; &acirc;&ucirc;&ccedil;&icirc;&acirc;">
+				<param name="Local" value="html\callback.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ocirc;&icirc;&eth;&igrave;&agrave;&ograve; Cron">
+				<param name="Local" value="html/cron.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&agrave;&ntilde;&ecirc;&egrave; &agrave;&auml;&eth;&aring;&ntilde;&icirc;&acirc;">
+				<param name="Local" value="html/addrmasks.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Aacute;&egrave;&aacute;&euml;&egrave;&icirc;&ograve;&aring;&ecirc;&agrave; zlib">
+				<param name="Local" value="html\zlib.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Perl-&ntilde;&icirc;&acirc;&igrave;&aring;&ntilde;&ograve;&egrave;&igrave;&ucirc;&aring; &eth;&aring;&atilde;&oacute;&euml;&yuml;&eth;&iacute;&ucirc;&aring; &acirc;&ucirc;&eth;&agrave;&aelig;&aring;&iacute;&egrave;&yuml;">
+				<param name="Local" value="html\regexp.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Igrave;&aring;&otilde;&agrave;&iacute;&egrave;&ccedil;&igrave; &egrave;&auml;&aring;&iacute;&ograve;&egrave;&ocirc;&egrave;&ecirc;&agrave;&ouml;&egrave;&egrave; CRAM-MD5">
+				<param name="Local" value="html\crammd5.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&egrave;&eth;&oacute;&aring;&igrave; &Dstrok;&agrave;&auml;&egrave;&oacute;&ntilde;">
+		<param name="Local" value="html/7.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Igrave;&agrave;&ntilde;&ograve;&aring;&eth; &ccedil;&agrave;&iuml;&oacute;&ntilde;&ecirc;&agrave;">
+			<param name="Local" value="html/startup.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Icirc;&ntilde;&iacute;&icirc;&acirc;&iacute;&ucirc;&aring; &iuml;&oacute;&iacute;&ecirc;&ograve;&ucirc; &ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&egrave;">
+			<param name="Local" value="html/cfgbases.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &iuml;&agrave;&eth;&agrave;&igrave;&aring;&ograve;&eth;&icirc;&acirc; &ccedil;&agrave;&iuml;&oacute;&ntilde;&ecirc;&agrave;">
+				<param name="Local" value="html/cfgstartup.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &ntilde;&iuml;&egrave;&ntilde;&ecirc;&agrave; &oacute;&ccedil;&euml;&icirc;&acirc;">
+				<param name="Local" value="html/cfgnodelist.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &iuml;&agrave;&eth;&icirc;&euml;&aring;&eacute;">
+				<param name="Local" value="html/cfgpasswords.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iuml;&agrave;&eth;&icirc;&euml;&egrave;">
+					<param name="Local" value="html/password.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Egrave;&igrave;&iuml;&icirc;&eth;&ograve; &iuml;&agrave;&eth;&icirc;&euml;&aring;&eacute;">
+					<param name="Local" value="html\importpwd.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde;&egrave;">
+				<param name="Local" value="html/pn.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Auml;&icirc;&igrave;&agrave;&oslash;&iacute;&egrave;&eacute; &ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde;">
+					<param name="Local" value="html/hd.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde; &ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&egrave;">
+					<param name="Local" value="html/configdir.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iuml;&agrave;&eth;&icirc;&euml;&uuml;&iacute;&ucirc;&eacute; &ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde;">
+					<param name="Local" value="html\sdsi.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iacute;&aring;&iuml;&agrave;&eth;&icirc;&euml;&uuml;&iacute;&ucirc;&eacute; &ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde;">
+					<param name="Local" value="html\sdii.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Acirc;&eth;&aring;&igrave;&aring;&iacute;&iacute;&ucirc;&eacute; &ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde;">
+					<param name="Local" value="html\sdti.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde; &icirc;&ograve;&iuml;&eth;&agrave;&acirc;&ecirc;&egrave;">
+					<param name="Local" value="html\sdo.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde; &otilde;&eth;&icirc;&iacute;&icirc;&euml;&icirc;&atilde;&egrave;&egrave;">
+					<param name="Local" value="html\sdl.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ecirc;&agrave;&ograve;&agrave;&euml;&icirc;&atilde; &ocirc;&euml;&agrave;&atilde;&icirc;&acirc;">
+					<param name="Local" value="html/flagsdir.html">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &igrave;&icirc;&auml;&aring;&igrave;&iacute;&ucirc;&otilde; &ntilde;&icirc;&aring;&auml;&egrave;&iacute;&aring;&iacute;&egrave;&eacute;">
+			<param name="Local" value="html/cfgdialup.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Icirc;&ntilde;&iacute;&icirc;&acirc;&iacute;&agrave;&yuml; &iuml;&agrave;&iacute;&aring;&euml;&uuml;">
+				<param name="Local" value="html/cfgdialupwin.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &euml;&egrave;&iacute;&egrave;&eacute; &iuml;&icirc;&divide;&ograve;&icirc;&acirc;&icirc;&eacute; &ntilde;&egrave;&ntilde;&ograve;&aring;&igrave;&ucirc;">
+				<param name="Local" value="html/cfgmlrline.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iacute;&agrave;&ntilde;&ograve;&eth;&icirc;&eacute;&ecirc;&agrave; EMSI-&auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+				<param name="Local" value="html/cfgemsi.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iacute;&agrave;&ntilde;&ograve;&eth;&icirc;&eacute;&ecirc;&agrave; &ecirc;&icirc;&igrave;&igrave;&oacute;&iacute;&egrave;&ecirc;&agrave;&ouml;&egrave;&icirc;&iacute;&iacute;&ucirc;&otilde; &iuml;&icirc;&eth;&ograve;&icirc;&acirc;">
+				<param name="Local" value="html/cfgserial.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&otilde;&aring;&igrave;&ucirc; &icirc;&atilde;&eth;&agrave;&iacute;&egrave;&divide;&aring;&iacute;&egrave;&yuml; &iuml;&eth;&icirc;&ccedil;&acirc;&icirc;&iacute;&icirc;&ecirc;">
+				<param name="Local" value="html/cfgrest.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &igrave;&icirc;&auml;&aring;&igrave;&icirc;&acirc;">
+				<param name="Local" value="html\modems.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &igrave;&icirc;&auml;&aring;&igrave;&icirc;&acirc;">
+					<param name="Local" value="html/cfgmodem.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Oacute;&iuml;&eth;&agrave;&acirc;&euml;&yuml;&thorn;&ugrave;&egrave;&aring; &ntilde;&egrave;&igrave;&acirc;&icirc;&euml;&ucirc; &igrave;&icirc;&auml;&aring;&igrave;&agrave;">
+					<param name="Local" value="html/modemctlchars.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iuml;&eth;&egrave;&aring;&igrave; &ocirc;&agrave;&ecirc;&ntilde;&icirc;&acirc;">
+					<param name="Local" value="html/fax.html">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ograve;&agrave;&aacute;&euml;&egrave;&ouml;&agrave; &iuml;&aring;&eth;&aring;&icirc;&iuml;&eth;&aring;&auml;&aring;&euml;&aring;&iacute;&egrave;&eacute;">
+				<param name="Local" value="html\overrides.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Iuml;&eth;&icirc;&ccedil;&acirc;&icirc;&iacute;&ecirc;&agrave; &iacute;&agrave; &oacute;&ccedil;&aring;&euml; &ograve;&icirc;&euml;&uuml;&ecirc;&icirc; &acirc; &aring;&atilde;&icirc; &eth;&agrave;&aacute;&icirc;&divide;&aring;&aring; &acirc;&eth;&aring;&igrave;&yuml;">
+					<param name="Local" value="html/cfgrefol.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Ograve;&agrave;&aacute;&euml;&egrave;&ouml;&agrave; &iuml;&aring;&eth;&aring;&icirc;&iuml;&eth;&aring;&auml;&aring;&euml;&aring;&iacute;&egrave;&eacute; &igrave;&icirc;&auml;&aring;&igrave;&iacute;&ucirc;&otilde; &oacute;&ccedil;&euml;&icirc;&acirc;">
+					<param name="Local" value="html/cfgnodes.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Dstrok;&aring;&auml;&agrave;&ecirc;&ograve;&icirc;&eth; &igrave;&icirc;&auml;&aring;&igrave;&iacute;&ucirc;&otilde; &iuml;&aring;&eth;&aring;&icirc;&iuml;&eth;&aring;&auml;&aring;&euml;&aring;&iacute;&egrave;&eacute;">
+					<param name="Local" value="html\ovrlined.html">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="&Egrave;&igrave;&iuml;&icirc;&eth;&ograve; &ntilde;&iuml;&egrave;&ntilde;&ecirc;&agrave; &oacute;&ccedil;&euml;&icirc;&acirc;">
+					<param name="Local" value="html\importnodes.html">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; TCP/IP">
+			<param name="Local" value="html/cfgip.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="TCP/IP Daemon">
+				<param name="Local" value="html/introdaemon.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Auml;&egrave;&agrave;&euml;&icirc;&atilde; &ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&egrave; TCP/IP Daemon">
+				<param name="Local" value="html/cfgipdaemon.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&iuml;&aring;&ouml;&egrave;&agrave;&euml;&uuml;&iacute;&ucirc;&aring; &ocirc;&euml;&agrave;&atilde;&egrave; TCP/IP">
+				<param name="Local" value="html/cfgipflg.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Acirc;&iacute;&aring;&oslash;&iacute;&egrave;&aring; &iuml;&eth;&egrave;&euml;&icirc;&aelig;&aring;&iacute;&egrave;&yuml;">
+			<param name="Local" value="html/cfgexternal.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&icirc;&ntilde;&ograve;-&iuml;&eth;&icirc;&ouml;&aring;&ntilde;&ntilde;&icirc;&eth;&ucirc; (&icirc;&aacute;&eth;&agrave;&aacute;&icirc;&ograve;&divide;&egrave;&ecirc;&egrave;)">
+				<param name="Local" value="html/cfgextpp.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Acirc;&iacute;&aring;&oslash;&iacute;&egrave;&aring; &ocirc;&euml;&agrave;&atilde;&egrave;">
+				<param name="Local" value="html/flags.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&eth;&acirc;&egrave;&ntilde;&ucirc;">
+				<param name="Local" value="html/cfgextsvc.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iuml;&aring;&eth;&egrave;&icirc;&auml;&egrave;&divide;&aring;&ntilde;&ecirc;&egrave; &ccedil;&agrave;&iuml;&oacute;&ntilde;&ecirc;&agrave;&aring;&igrave;&ucirc;&aring; &iuml;&eth;&egrave;&euml;&icirc;&aelig;&aring;&iacute;&egrave;&yuml;">
+				<param name="Local" value="html/cfgextcron.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Acirc;&iacute;&aring;&oslash;&iacute;&egrave;&aring; &oacute;&ograve;&egrave;&euml;&egrave;&ograve;&ucirc;">
+				<param name="Local" value="html/exttools.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Auml;&icirc;&iuml;&icirc;&euml;&iacute;&egrave;&ograve;&aring;&euml;&uuml;&iacute;&ucirc;&aring; &iuml;&oacute;&iacute;&ecirc;&ograve;&ucirc; &ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&egrave;">
+			<param name="Local" value="html\extra.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Iacute;&agrave;&ntilde;&ograve;&eth;&icirc;&eacute;&ecirc;&agrave; &ocirc;&agrave;&eacute;&euml;-&aacute;&icirc;&ecirc;&ntilde;&icirc;&acirc;">
+				<param name="Local" value="html/flboxcfg.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&yuml; &iuml;&eth;&icirc;&ccedil;&acirc;&icirc;&iacute;&icirc;&ecirc;">
+				<param name="Local" value="html/cfgppolls.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ocirc;&agrave;&eacute;&euml;&icirc;&acirc;&ucirc;&aring; &ccedil;&agrave;&iuml;&eth;&icirc;&ntilde;&ucirc;">
+				<param name="Local" value="html/cfgfilerequests.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&icirc;&aacute;&ucirc;&ograve;&egrave;&yuml;">
+				<param name="Local" value="html/cfgevents.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Oslash;&egrave;&ocirc;&eth;&icirc;&acirc;&agrave;&iacute;&iacute;&ucirc;&aring; &oacute;&ccedil;&euml;&ucirc;">
+				<param name="Local" value="html/encrypt.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ccedil;&agrave;&ugrave;&egrave;&ograve;&agrave; &ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&icirc;&iacute;&iacute;&ucirc;&otilde; &auml;&agrave;&iacute;&iacute;&ucirc;&otilde;">
+				<param name="Local" value="html/mastpwd.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Egrave;&iacute;&ntilde;&iuml;&aring;&ecirc;&ograve;&icirc;&eth; &oacute;&ccedil;&euml;&icirc;&acirc;">
+				<param name="Local" value="html\nodeinsp.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Auml;&egrave;&agrave;&euml;&icirc;&atilde; &quot;&Iacute;&agrave;&ntilde;&ograve;&eth;&icirc;&eacute;&ecirc;&egrave;&quot;">
+			<param name="Local" value="html/preferences.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Main">
+				<param name="Local" value="html/cfgmain.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; System">
+				<param name="Local" value="html/cfgsystem.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Interface">
+				<param name="Local" value="html\cfginterface.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Tray">
+				<param name="Local" value="html\cfgtray.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Logs">
+				<param name="Local" value="html\cfglogs.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; RCC">
+				<param name="Local" value="html\cfgremote.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; RAS DialUp">
+				<param name="Local" value="html\ras.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Protocols">
+				<param name="Local" value="html\cfgprotocols.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Netmail">
+				<param name="Local" value="html\cfgnetmail.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Tariff">
+				<param name="Local" value="html\cfgtariff.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="&Ntilde;&aring;&ecirc;&ouml;&egrave;&yuml; Sounds">
+				<param name="Local" value="html\cfgsound.html">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="&Ntilde;&iuml;&eth;&agrave;&acirc;&icirc;&divide;&iacute;&egrave;&ecirc; &iuml;&icirc; &acirc;&icirc;&ccedil;&igrave;&icirc;&aelig;&iacute;&icirc;&ntilde;&ograve;&yuml;&igrave; &Dstrok;&agrave;&auml;&egrave;&oacute;&ntilde;&agrave;">
+		<param name="Local" value="html/cfgref.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ntilde;&iuml;&egrave;&ntilde;&icirc;&ecirc; &agrave;&ograve;&icirc;&igrave;&icirc;&acirc;">
+			<param name="Local" value="html/atoms.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ntilde;&ecirc;&eth;&egrave;&iuml;&ograve;&ucirc;">
+			<param name="Local" value="html\scripts.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ocirc;&agrave;&eacute;&euml;-&ocirc;&euml;&agrave;&atilde;&egrave;">
+			<param name="Local" value="html\fileflags.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ograve;&agrave;&eth;&egrave;&ocirc;&iacute;&ucirc;&aring; &iuml;&euml;&agrave;&iacute;&ucirc;">
+			<param name="Local" value="html\tariff.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ecirc;&icirc;&iacute;&ntilde;&icirc;&euml;&uuml; &oacute;&auml;&agrave;&euml;&aring;&iacute;&iacute;&icirc;&atilde;&icirc; &oacute;&iuml;&eth;&agrave;&acirc;&euml;&aring;&iacute;&egrave;&yuml;">
+			<param name="Local" value="html\rcc.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&agrave;&eth;&agrave;&igrave;&aring;&ograve;&eth;&ucirc; &ecirc;&icirc;&igrave;&agrave;&iacute;&auml;&iacute;&icirc;&eacute; &ntilde;&ograve;&eth;&icirc;&ecirc;&egrave;">
+			<param name="Local" value="html/commandline.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ntilde;&icirc;&acirc;&igrave;&aring;&ntilde;&ograve;&egrave;&igrave;&icirc;&ntilde;&ograve;&uuml; &ntilde; &Agrave;&eth;&atilde;&oacute;&ntilde;&icirc;&igrave;">
+			<param name="Local" value="html/argus.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Ograve;&aring;&ecirc;&ntilde;&ograve;&icirc;&acirc;&ucirc;&eacute; &ocirc;&agrave;&eacute;&euml; &ecirc;&icirc;&iacute;&ocirc;&egrave;&atilde;&oacute;&eth;&agrave;&ouml;&egrave;&egrave;">
+			<param name="Local" value="html/textcfg.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&agrave;&ecirc;&aring;&ograve; &oacute;&ograve;&egrave;&euml;&egrave;&ograve; &auml;&euml;&yuml; &Dstrok;&agrave;&auml;&egrave;&oacute;&ntilde;&agrave;">
+			<param name="Local" value="html/utilities.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Iuml;&eth;&icirc;&atilde;&eth;&agrave;&igrave;&igrave;&iacute;&ucirc;&eacute; &egrave;&iacute;&ograve;&aring;&eth;&ocirc;&aring;&eacute;&ntilde; &Dstrok;&agrave;&auml;&egrave;&oacute;&ntilde;&agrave;">
+			<param name="Local" value="html\api.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="&Atilde;&icirc;&eth;&yuml;&divide;&egrave;&aring; &ecirc;&euml;&agrave;&acirc;&egrave;&oslash;&egrave;">
+			<param name="Local" value="html/hotkeys.html">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Perl compatible regular expressions">
+		<param name="Local" value="html\regexpadvanced.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Meta-Characters">
+			<param name="Local" value="html\reameta.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Backslash">
+			<param name="Local" value="html\reabackslash.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Circumflex and Dollar">
+			<param name="Local" value="html\reacircdollar.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Full Stop (Period, Dot)">
+			<param name="Local" value="html\reafullstop.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Square Brackets">
+			<param name="Local" value="html\reasqbrack.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Vertical Bar">
+			<param name="Local" value="html\reavertbar.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Internal Option Setting">
+			<param name="Local" value="html\reaintopt.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Subpatterns">
+			<param name="Local" value="html\reasubpatt.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Repetition">
+			<param name="Local" value="html\rearepet.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Back References">
+			<param name="Local" value="html\regexpadvbackref.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Assertions">
+			<param name="Local" value="html\reaassert.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Once-Only Subpatterns">
+			<param name="Local" value="html\reaoosubp.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Conditional Subpatterns">
+			<param name="Local" value="html\reacondsubp.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Comments">
+			<param name="Local" value="html\reacomments.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Performance">
+			<param name="Local" value="html\reaperform.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Limitiations">
+			<param name="Local" value="html\realimit.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Differences From Perl">
+			<param name="Local" value="html\readiffperl.html">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>
