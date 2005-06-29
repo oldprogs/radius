@@ -376,7 +376,6 @@ type
     N24: TMenuItem;
     ompHelp: TMenuItem;
     N25: TMenuItem;
-    tpCreateNormalPoll: TMenuItem;
 //    ppNormalPoll: TMenuItem;
     mpPause: TMenuItem;
     ppPause: TMenuItem;
@@ -472,10 +471,11 @@ type
     llOutboundSize: TLabel;
     InfoBtnPanel: TTransPan;
     bKillBWZ: TSpeedButton;
-    Webserver1: TMenuItem;
+    mcWebserver: TMenuItem;
     Panel14: TPanel;
     EdtEvtBtn: TSpeedButton;
     evListView: TListView;
+    procedure mcWebserverClick(Sender: TObject);
     procedure mhDrawThemedIconsClick(Sender: TObject);
     procedure MainTabControlChange(Sender: TObject);
     procedure bAbortClick(Sender: TObject);
@@ -585,7 +585,7 @@ type
     procedure ompHelpClick(Sender: TObject);
     function FormHelp(Command: Word; Data: Integer;
        var CallHelp: Boolean): Boolean;
-    procedure tpCreateNormalPollClick(Sender: TObject);
+//    procedure tpCreateNormalPollClick(Sender: TObject);
     procedure mpPauseClick(Sender: TObject);
     procedure ompCfPauseClick(Sender: TObject);
     procedure TrayPopupMenuPopup(Sender: TObject);
@@ -777,7 +777,10 @@ uses
    RadIni, tarif, EvtEdit, xtapi, themes, uxtheme,
 
 {$IFDEF WS}
-   IPCfg,
+  IPCfg,
+{$ENDIF}
+{$IFDEF WEB}
+  WebCfg,
 {$ENDIF}
 
    ShellAPI, TracePl, Extrnls, PollCfg, xEvents, FreqCfg,
@@ -7142,7 +7145,7 @@ begin
    Result := True;
 end;
 
-procedure TMailerForm.tpCreateNormalPollClick(Sender: TObject);
+{procedure TMailerForm.tpCreateNormalPollClick(Sender: TObject);
 var
    L: TFidoAddrColl;
    i: Integer;
@@ -7164,7 +7167,7 @@ begin
      FreeObject(L);
    end;
    if doit then Application.Minimize;
-end;
+end;}
 
 procedure TMailerForm.mpPauseClick(Sender: TObject);
 var
@@ -7557,6 +7560,13 @@ end;
 procedure TMailerForm.mhDrawThemedIconsClick(Sender: TObject);
 begin
   DrawThemedIcons;
+end;
+
+procedure TMailerForm.mcWebserverClick(Sender: TObject);
+begin
+{$IFDEF WEB}
+   SetupWeb;
+{$ENDIF}
 end;
 
 end.

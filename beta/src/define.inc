@@ -9,6 +9,7 @@
 
 {$IFDEF WS}
   {$DEFINE RASDIAL}
+  {$DEFINE WEB}
 {$ENDIF}
 
 {$DEFINE BINKP}

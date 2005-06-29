@@ -2,7 +2,7 @@ object MailerForm: TMailerForm
   Left = 319
   Top = 166
   Width = 625
-  Height = 412
+  Height = 507
   HelpContext = 1500
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -27,7 +27,7 @@ object MailerForm: TMailerForm
     Left = 0
     Top = 0
     Width = 617
-    Height = 366
+    Height = 461
     Align = alClient
     HotTrack = True
     TabOrder = 0
@@ -37,7 +37,7 @@ object MailerForm: TMailerForm
     OnChange = MainTabControlChange
     DesignSize = (
       617
-      366)
+      461)
     object lTime0: TLabel
       Left = 436
       Top = 2
@@ -62,7 +62,7 @@ object MailerForm: TMailerForm
       Left = 4
       Top = 24
       Width = 609
-      Height = 338
+      Height = 433
       Align = alClient
       BevelOuter = bvNone
       BorderStyle = bsSingle
@@ -1199,7 +1199,7 @@ object MailerForm: TMailerForm
         Left = 0
         Top = 267
         Width = 605
-        Height = 34
+        Height = 129
         Cursor = crHandPoint
         Align = alClient
         Color = clBtnFace
@@ -1218,7 +1218,7 @@ object MailerForm: TMailerForm
         Left = 0
         Top = 267
         Width = 605
-        Height = 34
+        Height = 129
         Align = alClient
         BevelOuter = bvNone
         TabOrder = 3
@@ -1226,7 +1226,7 @@ object MailerForm: TMailerForm
         OnResize = ChatPanResize
         object Panel13: TTransPan
           Left = 0
-          Top = 9
+          Top = 104
           Width = 605
           Height = 25
           Align = alBottom
@@ -1249,7 +1249,7 @@ object MailerForm: TMailerForm
           Left = 0
           Top = 19
           Width = 605
-          Height = 9
+          Height = 85
           Align = alClient
           BevelOuter = bvNone
           TabOrder = 1
@@ -1382,7 +1382,7 @@ object MailerForm: TMailerForm
       end
       object BottomPanel: TTransPan
         Left = 0
-        Top = 301
+        Top = 396
         Width = 605
         Height = 33
         Align = alBottom
@@ -2440,8 +2440,9 @@ object MailerForm: TMailerForm
         Caption = '-'
       end
       object mfRestart: TMenuItem
-        Caption = 'Restart'
+        Caption = '&Restart'
         ImageIndex = 2
+        ShortCut = 32850
         OnClick = mfRestartClick
       end
       object N17: TMenuItem
@@ -2458,13 +2459,20 @@ object MailerForm: TMailerForm
       Caption = '&Line'
       HelpContext = 1540
       object msOpenDialup: TMenuItem
-        Caption = 'Open Dial-up Line'
+        Caption = '&Dial-up Line'
       end
       object mfRunIPDaemon: TMenuItem
-        Caption = 'TCP/IP Daemon'
+        Caption = '&TCP/IP Daemon'
         Enabled = False
         ShortCut = 32816
         OnClick = mfRunIPDaemonClick
+      end
+      object mlChat: TMenuItem
+        Caption = '&Chat'
+        Enabled = False
+        ImageIndex = 11
+        ShortCut = 49219
+        OnClick = bChatClick
       end
       object mnuTerminal: TMenuItem
         Caption = 'Terminal'
@@ -2499,14 +2507,14 @@ object MailerForm: TMailerForm
         Caption = '-'
       end
       object mlResetTimeOut: TMenuItem
-        Caption = '&Flush Timeout'
+        Caption = 'Flush Timeout'
         Enabled = False
         ImageIndex = 7
         ShortCut = 16418
         OnClick = bStartClick
       end
       object mlIncTimeout: TMenuItem
-        Caption = 'Add to &Timeout'
+        Caption = 'Add to Timeout'
         Enabled = False
         ImageIndex = 8
         ShortCut = 16417
@@ -2523,24 +2531,17 @@ object MailerForm: TMailerForm
         OnClick = bSkipClick
       end
       object mlRefuse: TMenuItem
-        Caption = '&Reject File'
+        Caption = 'Reject File'
         Enabled = False
         ImageIndex = 10
         ShortCut = 16466
         OnClick = bRefuseClick
       end
-      object mlChat: TMenuItem
-        Caption = 'Open Chat'
-        Enabled = False
-        ImageIndex = 11
-        ShortCut = 49219
-        OnClick = bChatClick
-      end
       object N2: TMenuItem
         Caption = '-'
       end
       object mlClose: TMenuItem
-        Caption = '&Close'
+        Caption = 'Clo&se'
         Enabled = False
         ImageIndex = 12
         ShortCut = 16498
@@ -2632,9 +2633,9 @@ object MailerForm: TMailerForm
         OnClick = mcStartupClick
       end
       object mcPathnames: TMenuItem
-        Caption = '&Paths'
+        Caption = 'Paths'
         ImageIndex = 25
-        ShortCut = 49232
+        ShortCut = 16451
         OnClick = mcPathnamesClick
       end
       object mcNodelist: TMenuItem
@@ -2644,13 +2645,13 @@ object MailerForm: TMailerForm
         OnClick = mcNodelistClick
       end
       object mcPasswords: TMenuItem
-        Caption = 'Pass&words'
+        Caption = 'Passwords'
         ImageIndex = 27
-        ShortCut = 16471
+        ShortCut = 16455
         OnClick = NodesPasswords1Click
       end
       object mnuPrefEx: TMenuItem
-        Caption = 'Preferences...'
+        Caption = '&Preferences...'
         ImageIndex = 28
         ShortCut = 16464
         OnClick = mnuPrefExClick
@@ -2670,9 +2671,10 @@ object MailerForm: TMailerForm
         ShortCut = 16468
         OnClick = mcDaemonClick
       end
-      object Webserver1: TMenuItem
+      object mcWebserver: TMenuItem
         Caption = '&Web server'
-        Enabled = False
+        ShortCut = 16471
+        OnClick = mcWebserverClick
       end
       object N15: TMenuItem
         Caption = '-'
@@ -2847,16 +2849,10 @@ object MailerForm: TMailerForm
     Left = 514
     Top = 290
     object ppCreatePoll: TMenuItem
-      Caption = '&Create Crash Poll'
+      Caption = '&Create'
       ImageIndex = 13
       ShortCut = 116
       OnClick = bNewPollClick
-    end
-    object ppNormalPoll: TMenuItem
-      Caption = 'Create &Normal Poll'
-      ImageIndex = 14
-      ShortCut = 57460
-      OnClick = tpCreateNormalPollClick
     end
     object N11: TMenuItem
       Caption = '-'
@@ -3080,14 +3076,9 @@ object MailerForm: TMailerForm
       Caption = '-'
     end
     object tpCreatePoll: TMenuItem
-      Caption = 'Create Crash &Poll'
+      Caption = 'Create Manual Poll'
       ImageIndex = 13
       OnClick = tpCreatePollClick
-    end
-    object tpCreateNormalPoll: TMenuItem
-      Caption = 'Create &Normal Poll'
-      ImageIndex = 14
-      OnClick = tpCreateNormalPollClick
     end
     object N24: TMenuItem
       Caption = '-'

@@ -20,6 +20,7 @@
 #define IDH_CFGIP                1230
 #define IDH_CFGIPDAEMON          1240
 #define IDH_CFGIPFLG             1250
+#define IDH_CFGWEBSERVER         1260
 #define IDH_CFGREFOL             1300
 #define IDH_CFGSTARTUP           1320
 #define IDH_CSI                  1330

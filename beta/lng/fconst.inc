@@ -34,3 +34,4 @@ const
         rsStartWizzardForm   = 42;
         rsIPcfgForm          = 43;
         rsSetupForm          = 44;
+        rsWebCfgForm         = 45;

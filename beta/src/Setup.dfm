@@ -168,7 +168,6 @@ object SetupForm: TSetupForm
     Top = 34
     Width = 356
     Height = 319
-    PageIndex = 7
     TabOrder = 5
     object TPage
       Left = 0
@@ -227,13 +226,6 @@ object SetupForm: TSetupForm
           Height = 5
           Shape = bsTopLine
         end
-        object Bevel2: TBevel
-          Left = 15
-          Top = 76
-          Width = 320
-          Height = 5
-          Shape = bsTopLine
-        end
         object Bevel4: TBevel
           Left = 15
           Top = 16
@@ -286,20 +278,6 @@ object SetupForm: TSetupForm
           Width = 66
           Height = 13
           Caption = 'Main address:'
-        end
-        object lSessionOptions: TLabel
-          Left = 25
-          Top = 70
-          Width = 98
-          Height = 13
-          Caption = ' Session options '
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -11
-          Font.Name = 'MS Sans Serif'
-          Font.Style = [fsBold]
-          ParentFont = False
-          Transparent = False
         end
         object lSynchShift: TLabel
           Left = 16
@@ -370,6 +348,27 @@ object SetupForm: TSetupForm
           Width = 69
           Height = 13
           Caption = 'Max UDL age:'
+        end
+        object Bevel2: TBevel
+          Left = 15
+          Top = 76
+          Width = 320
+          Height = 5
+          Shape = bsTopLine
+        end
+        object lSessionOptions: TLabel
+          Left = 25
+          Top = 70
+          Width = 98
+          Height = 13
+          Caption = ' Session options '
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'MS Sans Serif'
+          Font.Style = [fsBold]
+          ParentFont = False
+          Transparent = False
         end
         object eMainAKA: TEdit
           Left = 16
@@ -563,7 +562,7 @@ object SetupForm: TSetupForm
           Width = 145
           Height = 21
           Style = csDropDownList
-          ItemHeight = 0
+          ItemHeight = 13
           TabOrder = 3
           Items.Strings = (
             'Shutdown'
@@ -594,6 +593,8 @@ object SetupForm: TSetupForm
           Width = 162
           Height = 17
           Caption = 'Use Nodelist Data'
+          Checked = True
+          State = cbChecked
           TabOrder = 5
         end
         object cbPlaySounds: TCheckBox
@@ -1757,79 +1758,79 @@ object SetupForm: TSetupForm
         Transparent = False
       end
       object lEntryList: TLabel
-        Left = 32
-        Top = 32
+        Left = 16
+        Top = 67
         Width = 42
         Height = 13
         Caption = 'Entry list:'
       end
       object lUserName: TLabel
-        Left = 48
-        Top = 83
+        Left = 16
+        Top = 107
         Width = 53
         Height = 13
         Alignment = taRightJustify
         Caption = 'UserName:'
       end
       object Label15: TLabel
-        Left = 48
-        Top = 107
+        Left = 16
+        Top = 131
         Width = 49
         Height = 13
         Alignment = taRightJustify
         Caption = 'Password:'
       end
       object cbEntryList: TComboBox
-        Left = 32
-        Top = 48
+        Left = 80
+        Top = 64
         Width = 145
         Height = 21
         Style = csDropDownList
-        ItemHeight = 13
+        ItemHeight = 0
         TabOrder = 0
       end
       object btnReloadRASEntries: TButton
-        Left = 192
-        Top = 46
-        Width = 129
+        Left = 232
+        Top = 62
+        Width = 105
         Height = 22
         Caption = 'Reload entrylist'
         TabOrder = 1
       end
       object cbRASEnabled: TCheckBox
-        Left = 32
-        Top = 144
+        Left = 16
+        Top = 40
         Width = 161
         Height = 17
         Caption = 'Enable RAS'
         TabOrder = 2
       end
       object eUserName: TEdit
-        Left = 105
-        Top = 80
-        Width = 215
+        Left = 81
+        Top = 104
+        Width = 144
         Height = 21
         TabOrder = 3
       end
       object ePassword: TEdit
-        Left = 105
-        Top = 104
-        Width = 215
+        Left = 81
+        Top = 128
+        Width = 144
         Height = 21
         PasswordChar = '*'
         TabOrder = 4
       end
       object cbRasDialConn: TCheckBox
-        Left = 32
-        Top = 186
+        Left = 16
+        Top = 170
         Width = 297
         Height = 17
         Caption = 'Create RASDIAL.CONNECTED flag'
         TabOrder = 5
       end
       object cbRasDialDisconn: TCheckBox
-        Left = 32
-        Top = 202
+        Left = 16
+        Top = 186
         Width = 297
         Height = 17
         Caption = 'Create RASDIAL.DISCONNECTED flag'

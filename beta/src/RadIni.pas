@@ -151,6 +151,10 @@ type
 {$IFDEF EXTREME}
             FTPDebug: boolean;
 {$ENDIF}
+{$IFDEF WEB}
+            CgiExecFile: string;
+            HttpPort: string;
+{$ENDIF}
             HydraTxWindow: integer;
             HydraRxWindow: integer;
             DontLogTariff: boolean;
@@ -278,6 +282,9 @@ const
   store = 'Store';
 {$IFDEF EXTREME}
   smtp = 'SMTP';
+{$ENDIF}
+{$IFDEF WEB}
+  Web = 'Web';
 {$ENDIF}
 
 procedure LoadIni;
@@ -707,7 +714,7 @@ begin
       ChatIgnoreFile := ReadString(main, 'ChatIgnoreFile', '');
       IgnoreCD := ReadBool(main, 'IgnoreCD', False);
       TrayLamps := ReadBool(main, 'TrayLamps', False);
-      UseNodelistData := ReadBool(main, 'UseNodelistData', false);
+      UseNodelistData := ReadBool(main, 'UseNodelistData', True);
       PlaySounds := ReadBool(main, 'PlaySounds', false);
 
       BindAddr := ReadString(IP, 'BindAddr', 'ANY');
@@ -809,6 +816,10 @@ begin
 {$IFDEF USE_TAPI}
       TAPIDebug := ReadBool(_tapi, 'TAPIDebug', False);
       TAPIConnect := DWORD(ReadInteger(_tapi, 'TAPIConnect', 57600));
+{$ENDIF}
+{$IFDEF WEB}
+      CgiExecFile := ReadString (Web, 'CgiExecFile', '');
+      HttpPort := ReadString (Web, 'HttpPort', '80');
 {$ENDIF}
 
       ExtApp := GetExtApp;
@@ -1064,6 +1075,11 @@ begin
 {$IFDEF USE_TAPI}
       WriteBool(_tapi, 'TAPIDebug', TAPIDebug);
       WriteInteger(_tapi, 'TAPIConnect', TAPIConnect);
+{$ENDIF}
+
+{$IFDEF WEB}
+      WriteString(Web, 'CgiExecFile', CgiExecFile);
+      WriteString(Web, 'HttpPort', HttpPort);
 {$ENDIF}
 
       WriteBool(remote, 'enabled', Remote_Enabled);

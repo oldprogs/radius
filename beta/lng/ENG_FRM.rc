@@ -205,6 +205,7 @@ LANGUAGE LANG_ENGLISH,0
         "mcPasswords|Pass&words\n"\
         "mcDialup|&Dial-up\n"\
         "mcDaemon|&TCP/IP Daemon\n"\
+        "mcWebserver|&Web server\n"\
         "mcFileBoxes|File-&boxes\n"\
         "mcPolls|P&olls\n"\
         "maFileRequests|&File Requests\n"\
@@ -227,6 +228,7 @@ LANGUAGE LANG_ENGLISH,0
         "mhWebSite|Argus &Web Site (on-line)\n"\
         "mnuRadiusOnWeb|Radius Web Site\n"\
         "mnuArgusClone|All Argus clones\n"\
+        "mnuLines|Dial-up Lines\n"\
         "mhLicence|&Licence\n"\
         "mhAbout|&About\n"\
         "mhHowReg|How to Register\n"\
@@ -251,7 +253,7 @@ LANGUAGE LANG_ENGLISH,0
         "opmPurge|Remove Broken Links\n"\
         "tpRestore|&Restore\n"\
         "tpMinimize|&Minimize\n"\
-        "tpCreatePoll|Create\n"\
+        "tpCreatePoll|Create Poll\n"\
         "tpEditFileRequest|Edit File Request\n"\
         "tpBrowseNodelist|&Browse Nodelist\n"\
         "tpExit|E&xit\n"\
@@ -680,4 +682,13 @@ LANGUAGE LANG_ENGLISH,0
         "btnApply|Apply\n"\
         "btnCancel|Cancel\n"\
         "btnOK|OK\n"
+
+ LngBaseEnglish+rsWebCfgForm "Web Server Configuration\n"\
+        "bOK|OK\n"\
+        "bCancel|Cancel\n"\
+        "bHelp|Help\n"\
+        "tb|HTTP|Templates|Nodes\n"\
+        "llCgiExecutable|CGI executable\n"\
+        "llHttpPort|HTTP port\n"
+
 }

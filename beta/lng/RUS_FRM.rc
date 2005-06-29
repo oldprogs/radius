@@ -204,7 +204,8 @@ LANGUAGE LANG_RUSSIAN,0
         "mcNodelist|Списки узлов\n"\
         "mcPasswords|Пароли\n"\
         "mcDialup|Модемные соединения\n"\
-        "mcDaemon|&TCP/IP соединения\n"\
+        "mcDaemon|TCP/IP соединения\n"\
+        "mcWebserver|Веб-сервер\n"\
         "mcFileBoxes|Файл-боксы\n"\
         "mcPolls|Прозвонки\n"\
         "maFileRequests|Файловые запросы\n"\
@@ -227,6 +228,7 @@ LANGUAGE LANG_RUSSIAN,0
         "mhWebSite|WWW-узел поддержки Argus\n"\
         "mnuRadiusOnWeb|Radius Web Site\n"\
         "mnuArgusClone|Клоны Аргуса\n"\
+        "mnuLines|Модемные линии\n"\
         "mhLicence|Лицензия\n"\
         "mhAbout|О программе\n"\
         "mhHowReg|Как зарегистрироваться\n"\
@@ -251,7 +253,7 @@ LANGUAGE LANG_RUSSIAN,0
         "opmPurge|Очистить\n"\
         "tpRestore|Восстановить\n"\
         "tpMinimize|Свернуть\n"\
-        "tpCreatePoll|Создать\n"\
+        "tpCreatePoll|Создать прозвонку\n"\
         "tpEditFileRequest|Редактировать файловый запрос\n"\
         "tpBrowseNodelist|Обзор списка узлов\n"\
         "tpExit|Выход\n"\
@@ -683,5 +685,13 @@ LANGUAGE LANG_RUSSIAN,0
         "btnApply|Применить\n"\
         "btnCancel|Отмена\n"\
         "btnOK|OK\n"
+
+ LngBaseRussian+rsWebCfgForm "Конфигурация веб-сервера\n"\
+        "bOK|OK\n"\
+        "bCancel|Отмена\n"\
+        "bHelp|Справка\n"\
+        "tb|HTTP|Шаблоны|Узлы\n"\
+        "llCgiExecutable|CGI-приложение\n"\
+        "llHttpPort|Порт HTTP\n"
 
 }
