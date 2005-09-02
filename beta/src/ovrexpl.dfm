@@ -61,7 +61,7 @@ object OvrExplainForm: TOvrExplainForm
     FixedFont.Name = 'MS Sans Serif'
     FixedFont.Style = []
     Align = alTop
-    DefaultRowHeight = 16
+    DefaultRowHeight = 18
     RowCount = 2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -71,6 +71,7 @@ object OvrExplainForm: TOvrExplainForm
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowMoving, goColMoving, goEditing, goDigitalRows]
     ParentFont = False
     TabOrder = 3
+    CheckBoxes = False
     ColWidths = (
       31
       154

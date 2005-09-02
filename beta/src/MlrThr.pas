@@ -2538,7 +2538,8 @@ function NodeDataStr(ANode: TAdvNode; AddFlags: Boolean): string;
             Result := Result + PatchPhoneNumber(D.Phone, False);
          end
          else begin
-            P := FindPort(0, 'IBN,BND,BNP,IFC,ITN,IP,IVM,TCP,TEL,VMP', D.Flags);
+{            P := FindPort(0, 'IBN,BND,BNP,IFC,ITN,IP,IVM,TCP,TEL,VMP', D.Flags); agradov}
+            P := FindPort(0, 'IBN,BND,BNP,IFC,ITN,IP,IVM,VMP', D.Flags);
             Result := Result + D.IPAddr;
             if P <> 0 then begin
                Result := Result + ':' + IntToStr(P);
@@ -3066,7 +3067,7 @@ end;
 function CreateTransferProtocol(Typ: TProtocolType; CP: TPort; Flags: TRemoteMailerFlags; var IsZModem: Boolean; UserFlags: string; prec: TProtocolRecord): TBaseProtocol;
 var
    zmo: TZmodemOptionSet;
-   u, OEM, ShortAndLong: boolean;
+   {u,} OEM, ShortAndLong: boolean;
    z: string;
 begin
    IsZModem := False;
@@ -3094,21 +3095,22 @@ begin
          end;
       piHydra:
          begin
-            u := False;
+{            u := False;}
             OEM := IniFile.HydraOEM;
             ShortAndLong := IniFile.HydraShortLongfilename;
             while UserFlags <> '' do
             begin
                GetWrd(UserFlags, z, ',');
-               u := u or (UpperCase(z) = 'U');
-               if u then
-               begin
-                  if uppercase(z) = 'OEM' then OEM := true;
-                  if uppercase(z) = 'DOS' then OEM := true;
-                  if uppercase(z) = 'WIN' then OEM := false;
-                  if uppercase(z) = 'SHORTLONG' then ShortAndLong := true;
-                  if uppercase(z) = 'ONLYLONG' then ShortAndLong := false;
-               end;
+{               u := u or (UpperCase(z) = 'U');}
+               if UpperCase(z) = 'U' then continue;
+{               if u then
+               begin}
+               if uppercase(z) = 'OEM' then OEM := true;
+               if uppercase(z) = 'DOS' then OEM := true;
+               if uppercase(z) = 'WIN' then OEM := false;
+               if uppercase(z) = 'SHORTLONG' then ShortAndLong := true;
+               if uppercase(z) = 'ONLYLONG' then ShortAndLong := false;
+{               end;}
             end;
             prec.HydraOEM := OEM;
             prec.HydraShortNames := ShortAndLong;
@@ -5373,11 +5375,8 @@ var
    tof,
    tot: TOutFile;
    RqdMatched, FrbMatched: Boolean;
-   sss,
-      flags, f2, //visualx
-   STrsFilesRqd,
-      STrsFilesFrb: string;
-   u, b: boolean;
+   sss, flags, f2, STrsFilesRqd, STrsFilesFrb: string;
+   {u,} b: boolean;
    Msgs: TStringColl;
 
    procedure Add(S: TOutStatus);
@@ -5390,8 +5389,6 @@ var
      begin
        Add(osRequest);
      end;}
-
-   //{visual x
 
    function IsFReqTime(const flags: string): boolean;
    var
@@ -5424,8 +5421,9 @@ var
          while flags <> '' do
          begin
             GetWrd(Flags, f2, ',');
-            u := u or (UpperCase(f2) = 'U');
-            if u and (UpperCase(f2) = 'NRQ') then
+{            u := u or (UpperCase(f2) = 'U');}
+//            if UpperCase(f2) = 'U' then continue;
+            if {u and} (UpperCase(f2) = 'NRQ') then
             begin
                b := false;
                LogOnce(ltinfo, Format('%s doesn''t accept FReqs (overrides)', [Addr2Str(SD.ActivePoll.Node.Addr)]));
@@ -5435,7 +5433,6 @@ var
       end; {if}
       if b then Add(osRequest);
    end;
-   //visual x}
 
 begin
    IgnoreNextEvent := True;
@@ -15788,14 +15785,15 @@ begin
       for i := 0 to c.Count - 1 do
       begin
          case DWORD(c[i]) of
-            kwTEL,
-               kwTCP,
+{            kwTEL,
+               kwTCP, agradov}
                kwVMP,
                kwIVM,
                kwITN,
                kwIP:
                begin
-                  CurPort := FindPort(23, 'ITN,IP,IVM,TCP,TEL,VMP', Flags);
+{                  CurPort := FindPort(23, 'ITN,IP,IVM,TCP,TEL,VMP', Flags); agradov}
+                  CurPort := FindPort(23, 'ITN,IP,IVM,VMP', Flags);
                   CurProt := ptTelnet;
                   Break;
                end;

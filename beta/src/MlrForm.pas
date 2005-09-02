@@ -3328,7 +3328,7 @@ procedure TMailerForm.UpdateView(fromcc: boolean);
       j,
       k: Integer;
       c: TColl;
-      u: TSystemTime;
+//      u: TSystemTime;
       s: TSystemTime;
       l: TSystemTime;
       y: TSystemTime;
@@ -3462,7 +3462,7 @@ procedure TMailerForm.UpdateView(fromcc: boolean);
       for k := 0 to CollMax(c) do begin
          ol := c[k];
          if ol.CronRec.IsUTC then GetSystemTime(S) else GetLocalTime(S);
-         u := s;
+//         u := s;
          for j := 0 to ol.CronRec.Count - 1 do begin
             if not ol.Active then begin
                if not (S.wMonth - 1 in ol.CronRec.p^[j].Months) then continue;

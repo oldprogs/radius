@@ -27,7 +27,7 @@ object NodelistBrowser: TNodelistBrowser
     Left = 0
     Top = 0
     Width = 567
-    Height = 214
+    Height = 221
     Align = alClient
     ChangeDelay = 50
     HideSelection = False
@@ -43,7 +43,7 @@ object NodelistBrowser: TNodelistBrowser
   end
   object pnInfo: TTransPan
     Left = 0
-    Top = 224
+    Top = 231
     Width = 567
     Height = 182
     Align = alBottom
@@ -417,7 +417,6 @@ object NodelistBrowser: TNodelistBrowser
       Height = 182
       Align = alRight
       BevelOuter = bvNone
-      ParentBackground = True
       TabOrder = 0
       DesignSize = (
         114
@@ -478,7 +477,7 @@ object NodelistBrowser: TNodelistBrowser
   end
   object pnDivider: TPanel
     Left = 0
-    Top = 214
+    Top = 221
     Width = 567
     Height = 10
     Align = alBottom

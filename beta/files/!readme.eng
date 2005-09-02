@@ -1,11 +1,14 @@
-1. If you update from the other Argus clone or Argus 
-   or from Radius version less than 4.009-06/23/2002
-   then you SHOULD *recompile* your nodelists!!
+1. If you update from the other Argus clone or Argus
+   or from Radius version less than 4.009-06/23/2002,
+   you MUST RECOMPILE YOUR NODELISTS!!
 
-2. Starting from Radius 4.011-03/06/2005 there have
-   been made some changes concerning outbound and
-   polls behaviour. Check your Radius configuration
-   in Config/Polls/Options to avoid possible problems.
+2. Starting from Radius 4.011-03/06/2005, there have been made
+   some changes concerning outbound and polls behaviour.
+   Check your Radius configuration in Config/Polls/Options
+   to avoid possible problems.
+   Starting from Radius 4.011-08/07/2005, flags TCP, TEL, TELNET
+   in nodes overrides are obsolete and will be considered as
+   work-time flags Txy. Instead, use flags IP, ITN, respectively.
 
 3. You should add radius.map which comes in _this_
    archive in the same directory with radius.exe.

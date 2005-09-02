@@ -960,7 +960,7 @@ begin
       NodeController.Lists.Clear;
       for I := 0 to Cfg.Nodelist.Files.Count - 1 do
       begin
-      //дифференцировать: сначала пойнтлисты, потом нодлист.
+      // differentiate: pointlists first, then nodlist
         if (Cfg.Nodelist.Files.Count = AltCfg.NodelistDataDomain.Count) and
            (inifile.D5Out) then _domain := AltCfg.NodelistDataDomain[I]
         else _domain := '';
@@ -1055,14 +1055,10 @@ begin
     end;
 end;
 
-// Я сделал, что удаляется только лишний IP-флаг и время, если в функцию передано CM.
-// Все остальное IMHO нужно оставить, иначе невозможно работать с ограничениями через
-// пользовательские флаги в переопределениях, так как последние твоей процедурой удалялись
-// Можно еще сделать удаление модемных флагов, но IMHO необязательно.
-
 function IPFlags(const CM: boolean; const a, f: string): string;
 const
-  fs = ',IBN,BND,BNP,IFC,ITN,TEL,IEM,IMI,ISE,ITX,IUC,EVY,EMA,';
+{  fs = ',IBN,BND,BNP,IFC,ITN,TEL,IEM,IMI,ISE,ITX,IUC,EVY,EMA,'; agradov}
+  fs = ',IBN,BND,BNP,IFC,ITN,IEM,IMI,ISE,ITX,IUC,EVY,EMA,';
   modem = ',V22,V29,V32,V32B,V34,V42,V42B,MNP,H96,HST,H14,H16,MAX,PEP,CSP,V32T,VFC,ZYX,V90C,V90S,X2C,X2S,Z19,V110L,V110H,V120L,V120H,X75,';
   {$IFNDEF EXTREME}
   email = ',IEM,IMI,ISE,ITX,IUC,EVY,EMA,';
@@ -1071,41 +1067,39 @@ const
   CM_ = ',IEM,IMI,ISE,ITX,IUC,EVY,EMA,';
 var
   Flags, s, z: string;
-  u, Local: boolean;
+  {u,} Local: boolean;
   _CM: boolean;
 begin
   s := '';
   _CM := CM;
   Flags := f;
   delete(flags, 1, 1);
-  u := false;
+{  u := false;}
   while Flags <> '' do
   begin
     GetWrd(Flags, z, ',');
-    u := u or (UpperCase(z) = 'U');
-    if (pos(',' + copy(z, 1, 3) + ',', fs) <> 0) and (copy(a, 1, 3) <> copy(z, 1, 3)) and (not u) then continue;
-    if (pos(',' + uppercase(z) + ',', modem) <> 0) and (not u) then continue;
+{    u := u or (UpperCase(z) = 'U');}
+    if (UpperCase(z) = 'U') then continue;
+    if (pos(',' + copy(z, 1, 3) + ',', fs) <> 0) and (copy(a, 1, 3) <> copy(z, 1, 3)) {and (not u)} then continue;
+    if (pos(',' + uppercase(z) + ',', modem) <> 0) {and (not u)} then continue;
     {$IFNDEF EXTREME}
-    if (pos(',' + uppercase(z) + ',', email) <> 0) and (not u) then continue;
+    if (pos(',' + uppercase(z) + ',', email) <> 0) {and (not u)} then continue;
     {$ENDIF}
-    if (pos(',' + uppercase(z) + ',', ftp) <> 0) and (not u) then continue;
+    if (pos(',' + uppercase(z) + ',', ftp) <> 0) {and (not u)} then continue;
     _CM := _CM or (pos(',' + copy(z, 1, 3) + ',', CM_) <> 0);
     s := s + ',' + z;
   end;
   if _CM then
   begin
     Flags := s;
-    u := false;
+{    u := false;}
     s := '';
     while Flags <> '' do
     begin
       GetWrd(Flags, z, ',');
       if z = '' then continue;
-      if (UpperCase(z) = 'U') and (not u) then
-      begin
-        u := true;
-      end;
-      if u and (IsTxyEx(z, Local, false) or IsTxyEx(z, Local, true)) then continue;
+      if (UpperCase(z) = 'U') {and (not u)} then continue;
+      if {u and} (IsTxyEx(z, Local, false) or IsTxyEx(z, Local, true)) then continue;
       s := s + ',' + z;
     end;
     if pos(',CM,', s + ',') = 0 then s := ',CM' + s;
@@ -1115,11 +1109,14 @@ begin
   if uppercase(z) = ',U' then delete(s, length(s) - 1, 2);
   result := s;
   if pos(a, result) = 0 then
-    result := a + ',' + result; // вот тут вместо a можно добавлять
-                                // дефолтовый протокол, который настраивать
-                                // в ini-файле.
+    result := a + ',' + result;
+// instead of 'a' you can add default protocol, defined in ini-file
 end;
 
+{
+When/if there is a need to uncomment this function,
+correct handling of _unnecessary_ 'U' flag!
+Alexey Gradovtsev
 function _IPFlags(const CM: boolean; const a, f: string): string;
 var
    s: string;
@@ -1175,7 +1172,7 @@ begin
    end;
   if pos(',PROXY', ',' + f) > 0 then result := 'PROXY,' + result;
   if pos(',NOPROXY', ',' + f) > 0 then result := 'NOPROXY,' + result;
-end;
+end;}
 
 function GetListedNode(const Addr: TFidoAddress): TFidoNode;
 begin
@@ -1282,11 +1279,12 @@ var
   s,
   z: string;
   g: string;
-  u: boolean;
+{  u: boolean;}
 begin
   Result := CC;
   g := '';
-  fs := 'IP,TCP,INA';
+{  fs := 'IP,TCP,INA'; agradov}
+  fs := 'IP,INA';
   for i := 1 to WordCount(fs, [',']) do begin
      g := FindgAddr(ga, ExtractWord(i, fs, [',']), Flags);
   end;
@@ -1382,21 +1380,23 @@ begin
      if Addr.Point <> 0 then s := Format('p%d.', [Addr.Point]);
      ga := Format(ga, [s]);
   end;
-  fs := ',IBN,BND,BNP,IFC,ITN,TEL,BINKD,IEM,IMI,ISE,ITX,IUC,EVY,EMA,POP';
+{  fs := ',IBN,BND,BNP,IFC,ITN,TEL,BINKD,IEM,IMI,ISE,ITX,IUC,EVY,EMA,POP'; agradov}
+  fs := ',IBN,BND,BNP,IFC,ITN,BINKD,IEM,IMI,ISE,ITX,IUC,EVY,EMA,POP';
   {$IFDEF EXTREME}
   em := ',IEM,IMI,ISE,ITX,IUC,EVY,EMA,';
   {$ENDIF}
   s := ',';
 
   fs2 := flags;
-  u := false;
+{  u := false;}
 
   while fs2 <> '' do
   begin
     GetWrd(fs2, z, ',');
     if z = '' then continue;
-    u := u or (UpperCase(z) = 'U');
-    if u then break;
+{    u := u or (UpperCase(z) = 'U');
+    if u then break;}
+    if UpperCase(z) = 'U' then Continue; {break;}
     if (pos(copy(z, 1, 3), fs) > 0) and (pos(',' + z + ',', s) = 0) then
     begin
       {$IFDEF EXTREME}
@@ -1501,7 +1501,7 @@ end;
 
 var
   f: TNodePrefixFlag;
-  Local, u, overip, over: Boolean;
+  Local, {u,} overip, over: Boolean;
   s1,s2: string;
   ga: string;
   an: TAdvNodeData;
@@ -1548,14 +1548,14 @@ begin
     if overip then
     begin
       overip := false;
-      u := false;
+{      u := false;}
       an := IpData[0];
       s1 := an.Flags;
       while s1 <> '' do
       begin
         GetWrd(s1, s2, ',');
-        u := u or (UpperCase(s2) = 'U');
-        if u and IsTxyEx(s2, Local, false) then
+{        u := u or (UpperCase(s2) = 'U');}
+        if {u and} IsTxyEx(s2, Local, false) then
         begin
           overip := true;
           break;

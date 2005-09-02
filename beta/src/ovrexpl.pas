@@ -167,7 +167,7 @@ begin
     s2 := Trim(SC3[i]);
     if s2 <> '' then
     begin
-      s := HumanTime2UTxyL(s2, PosU = -1);
+      s := HumanTime2UTxyL(s2 {, PosU = -1});
       if s = '' then
       begin
         DisplayError(FormatLng(rsOvEdNotTime, [s2]), Handle);
@@ -182,7 +182,7 @@ begin
     s2 := Trim(SC4[i]);
     if s2 <> '' then
     begin
-      s := HumanTime2UTxyLEx(s2, True, PosU = -1);
+      s := HumanTime2UTxyLEx(s2, True {, PosU = -1});
       if s = '' then
       begin
         DisplayError(FormatLng(rsOvEdNotTime, [s2]), Handle);

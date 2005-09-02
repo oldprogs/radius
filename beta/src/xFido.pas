@@ -745,10 +745,10 @@ const
 
 
 const
-  kwTCP                   = $17844453;
+{  kwTCP                   = $17844453; agradov}
   kwVMP                   = $8A83BDB3;
-  kwTEL                   = $55DFBF9A;
-  kwTELNET                = $4C81E181;
+{  kwTEL                   = $55DFBF9A;
+  kwTELNET                = $4C81E181; agradov}
   kwIFC                   = $FAB3C1EB;
   kwBINKP                 = $D83DB481;
   kwBINKD                 = $C2E760FC;
@@ -837,8 +837,8 @@ function IsNotMailExt(const AExt: string): Boolean;
 procedure PurgeTimeFlags(SC: TStringColl);
 procedure PurgeTimeFlagsEx(SC: TStringColl;FReq: Boolean);
 procedure PurgeIpFlags(SC: TStringColl);
-function HumanTime2UTxyL(const ATime: string; NeedU: Boolean): string;
-function HumanTime2UTxyLEx(ATime: string; FReq, NeedU: Boolean): string;
+function HumanTime2UTxyL(const ATime: string {; NeedU: Boolean}): string;
+function HumanTime2UTxyLEx(ATime: string; FReq {, NeedU}: Boolean): string;
 function OvrColl2Str(C: TColl): string;
 function NewFidoAddr(const A: TFidoAddress): PFidoAddress;
 function NextPollOptionMatches(var s: string; AValue: DWORD): Boolean;
@@ -2288,16 +2288,17 @@ const
     20*2+0  // Zone 6 mail hour (20:00 - 21:00 UTC)
   );
 var
-  Local, u: Boolean;
+  Local {, u}: Boolean;
   ZMHZone: Integer; {*}
 
 begin
-  u := False;
+{  u := False;}
   Result := [];
   while Flags <> '' do
   begin
     GetWrd(Flags, z, ',');
-    u := u or (UpperCase(z) = 'U');
+{    u := u or (UpperCase(z) = 'U');}
+    if UpperCase(z) = 'U' then continue;
     if not FReq then
     begin
       if ((z[1] = '#') or (z[1] = '!')) then begin {*}
@@ -2321,7 +2322,7 @@ begin
         Exit;
       end;
     end;
-    if u and IsTxyEx(z, Local, FReq) then
+    if {u and} IsTxyEx(z, Local, FReq) then
     begin
       if (GetTime(z[2], t1)) and
          (GetTime(z[3], t2)) then
@@ -2438,6 +2439,7 @@ begin
   FreeObject(L);
 end;
 
+{agradov
 function ConflictsFSC0072(s: string): string;
 var
   Local, u: Boolean;
@@ -2454,12 +2456,12 @@ begin
     begin
       if not u then
       begin
-        if (us <> 'TCP') and (us <> 'TEL') then
-          Result := FormatLng(rsXfFSC72U, [z]);
+      if (us <> 'TCP') and (us <> 'TEL') then
+        Result := FormatLng(rsXfFSC72U, [z]);
       end;
     end;
   end;
-end;
+end;}
 
 function ParseOverride(const AAStr: string; var Msg, Item: string; Dialup: Boolean): TColl;
 var
@@ -2585,7 +2587,7 @@ begin
     end;
   end;
   if nTyp = otNone then Exit;
-  Msg := ConflictsFSC0072(nFlags);
+{  Msg := ConflictsFSC0072(nFlags); agradov}
   if Msg <> '' then Exit;
   Result := True;
   o := TOvrData.Create;
@@ -2601,7 +2603,8 @@ var
   o: TOvrData;
 
 const
-  TCPFlags = 'BND, BNP, IBN, IFC, IP, ITN, IVM, TCP, TEL, VMP, POP, ITX, IUC, IMI, ISE, IEM';
+{  TCPFlags = 'BND, BNP, IBN, IFC, IP, ITN, IVM, TCP, TEL, VMP, POP, ITX, IUC, IMI, ISE, IEM'; agradov}
+  TCPFlags = 'BND, BNP, IBN, IFC, IP, ITN, IVM, VMP, POP, ITX, IUC, IMI, ISE, IEM';
   CMsg: array[Boolean] of Integer = (rsXfCmsg0, rsXfCmsg1);
 
 begin
@@ -2642,10 +2645,10 @@ end;
 function IsIpFlag(ACRC: DWORD): Boolean;
 begin
   case ACRC of
-    kwTCP    ,
+{    kwTCP    , agradov}
     kwVMP    ,
-    kwTEL    ,
-    kwTELNET ,
+{    kwTEL    ,
+    kwTELNET , agradov}
     kwIFC    ,
     kwBINKP  ,
     kwBINKD  ,
@@ -2699,8 +2702,8 @@ begin
   Result := False;
 //  s := UpperCase(s); //All standard flags must be UpperCased
                        //in other case they are not standard IP-Flags
-  i := Pos('U,', s);
-  if i > 0 then s := Copy(s, 1, i);
+{  i := Pos('U,', s);
+  if i > 0 then s := Copy(s, 1, i);}
   f := TStringColl.Create;
   f.FillEnum(s, ',', True);
   for i := 0 to f.Count - 1 do
@@ -3146,34 +3149,34 @@ end;
 procedure PurgeTimeFlagsEx(SC: TStringColl; FReq: Boolean);
 var
   i, Idx: Integer;
-  uu, ok, Local: Boolean;
+  {uu,} ok, Local: Boolean;
   s: string;
 begin
   Idx := 0;
-  uu := False;
+{  uu := False;}
   repeat
     ok := True;
     for i := Idx to CollMax(SC) do
     begin
       Idx := i;
       s := UpperCase(SC[i]);
-      if not uu then
+{      if not uu then
+      begin}
+      if s = 'U' then Continue;
+      if (s = 'CM') or IsTxyEx(s, Local, FReq) then
       begin
-        if s = 'U' then
-        begin
-          uu := True;
-          Continue;
-        end;
-        if s = 'CM' then
-        begin
-          ok := False; SC.AtFree(i); Break
-        end;
-        Continue;
+        ok := False;
+        SC.AtFree(i);
+        Break
+      end;
+{      Continue;
       end;
       if IsTxyEx(s, Local, FReq) then
       begin
-        ok := False; SC.AtFree(i); Break
-      end;
+        ok := False;
+        SC.AtFree(i);
+        Break
+      end;}
     end;
   until ok;
   i := CollMax(SC);
@@ -3277,12 +3280,12 @@ begin
   if H2xCvtOK(s1) and H2xCvtOK(s2) then Result := Format('T%s%sL', [s1, s2]);
 end;
 
-function HumanTime2UTxyL(const ATime: string; NeedU: Boolean): string;
+function HumanTime2UTxyL(const ATime: string {; NeedU: Boolean}): string;
 begin
-  result:=HumanTime2UTxyLEx(ATime, false, NeedU);
+  result:=HumanTime2UTxyLEx(ATime, false {, NeedU});
 end;
 
-function HumanTime2UTxyLEx(ATime: string; FReq, NeedU: Boolean): string;
+function HumanTime2UTxyLEx(ATime: string; FReq {, NeedU}: Boolean): string;
 var
   s: string;
   c: TStringColl;
@@ -3306,8 +3309,8 @@ begin
   end;
   if c.Count>0 then
   begin
-    if NeedU then Result := 'U,' else Result := '';
-    Result := Result + c.LongStringD(',')
+{    if NeedU then Result := 'U,' else Result := '';}
+    Result := {Result +} c.LongStringD(',')
   end else Result := '';
   FreeObject(c);
 end;

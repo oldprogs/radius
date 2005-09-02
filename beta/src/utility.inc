@@ -170,8 +170,9 @@ begin
                 s := SC[sp];
                 Local := True;
                 if (pos('-', s) <> 0) or (pos('CM', s) <> 0) then begin
-                   s := HumanTime2UTxyL(s,False);
-                   if IsTxy(s, Local) then SC[sp] := 'U,' + s;
+{                   s := HumanTime2UTxyL(s,False);
+                   if IsTxy(s, Local) then SC[sp] := 'U,' + s;}
+                   if IsTxy(s, Local) then SC[sp] := HumanTime2UTxyL(s);
                 end;
         end;
     s := SC.LongStringD(',');

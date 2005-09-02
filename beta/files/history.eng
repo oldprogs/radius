@@ -18,6 +18,11 @@ Marks:
 4.011 (??-???-2005)� Current Alpha
 컴컴컴컴컴컴컴컴컴켸
 
+[#] According to FTS-5001, 01/26/2005, changed the way of handling user
+    flags in node- and pointlists as well as in nodes overrides. From now
+    on one can define user flags without special anticipatory "U" flag.
+    Flags TCP, TEL, TELNET are obsolete due to possible ambiguity.
+    Instead, use IP, ITN flags, respectively (Victor Symov, 2:5066/75)
 [#] Atoms names have been made readable, especially in Russian interface
     (Aleksej R Serdyukov, 2:5020/24000)
 [-] Fixed a bug in TCP/IP daemon which caused incoming connections to be
